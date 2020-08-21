@@ -33,6 +33,11 @@ def fatJarProvider = tasks.register('fatJar', Jar) { task ->
 	task.doFirst {
 		task.from files(sourceClasses)
 		task.from configurations.runtimeClasspath.asFileTree.files.collect { zipTree(it) }
+		task.exclude '**/*.kotlin_metadata'
+		task.exclude '**/*.kotlin_module'
+		task.exclude '**/*.kotlin_builtins'
+		task.exclude '**/module-info.class'
+		task.exclude 'META-INF/maven/**'
 	}
 }
 
