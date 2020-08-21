@@ -1,0 +1,92 @@
+buildscript {
+	dependencies {
+		classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0'
+	}
+}
+
+apply plugin: 'org.jetbrains.kotlin.jvm'
+
+configurations {
+	r8
+}
+
+dependencies {
+	testImplementation 'junit:junit:4.13'
+	testImplementation 'com.google.truth:truth:1.0.1'
+
+	r8 'com.android.tools:r8:2.0.99'
+}
+
+def fatJarProvider = tasks.register('fatJar', Jar) { task ->
+	task.dependsOn(configurations.named('runtimeClasspath'))
+	task.dependsOn(tasks.named('jar'))
+
+	task.classifier 'fat'
+
+	task.manifest {
+		attributes 'Main-Class': 'com.jakewharton.gradle.dependencies.diff.Main'
+	}
+
+	def sourceClasses = sourceSets.main.output.classesDirs
+	task.inputs.files(sourceClasses)
+
+	task.doFirst {
+		task.from files(sourceClasses)
+		task.from configurations.runtimeClasspath.asFileTree.files.collect { zipTree(it) }
+	}
+}
+
+def r8File = new File("$buildDir/libs/$archivesBaseName-r8.jar")
+def r8Jar = tasks.register('r8Jar', JavaExec) { task ->
+	task.dependsOn(configurations.named('runtimeClasspath'))
+	task.dependsOn(fatJarProvider.get())
+	task.outputs.file(r8File)
+
+	task.classpath(configurations.r8)
+	task.main = 'com.android.tools.r8.R8'
+	task.args = [
+		'--release',
+		'--classfile',
+		'--output', r8File.toString(),
+		'--pg-conf', 'src/main/rules.txt',
+		'--lib', System.properties['java.home'].toString()
+	]
+	doFirst {
+		task.args += fatJarProvider.get().archivePath
+	}
+}
+
+def binaryFile = new File("$buildDir/${archivesBaseName}.jar")
+def binaryJar = tasks.register('binaryJar') { task ->
+	task.dependsOn(r8Jar)
+
+	task.inputs.file(r8File)
+	task.outputs.file(binaryFile)
+
+	task.doLast {
+		binaryFile.getParentFile().mkdirs()
+		binaryFile.delete()
+		binaryFile << "#!/bin/sh\n\nexec java \$JAVA_OPTS -jar \$0 \"\$@\"\n\n"
+		r8File.withInputStream { binaryFile.append it }
+
+		binaryFile.setExecutable true, false
+	}
+}
+
+tasks.named('assemble').configure { task ->
+	task.dependsOn(binaryJar)
+}
+
+artifacts {
+	archives file: binaryFile, name: 'binary', type: 'jar', builtBy: binaryJar, classifier: 'binary'
+}
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+}
+repositories {
+	mavenCentral()
+	google()
+}

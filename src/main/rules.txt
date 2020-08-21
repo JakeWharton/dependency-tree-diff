@@ -1,0 +1,5 @@
+-dontobfuscate
+
+-keep class com.jakewharton.gradle.dependencies.diff.Main {
+	public static void main(java.lang.String[]);
+}
