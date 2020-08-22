@@ -1,5 +1,5 @@
 -dontobfuscate
-
+-allowaccessmodification
 -keepattributes SourceFile, LineNumberTable
 
 -keep class com.jakewharton.gradle.dependencies.diff.Main {
