@@ -2,7 +2,7 @@
 
 package com.jakewharton.gradle.dependencies.diff
 
-import java.io.File
+import java.nio.file.Paths
 import java.util.ArrayDeque
 import kotlin.system.exitProcess
 
@@ -12,8 +12,8 @@ fun main(vararg args: String) {
 		exitProcess(1)
 	}
 
-	val old = args[0].let(::File).readText()
-	val new = args[1].let(::File).readText()
+	val old = args[0].let(Paths::get).readText()
+	val new = args[1].let(Paths::get).readText()
 
 	print(dependencyTreeDiff(old, new))
 }
