@@ -31,13 +31,13 @@ fun dependencyTreeDiff(old: String, new: String): String {
 }
 
 private fun findDependencyPaths(text: String): Set<List<String>> {
-	val start = text.indexOf("\n+--- ") + 1
-	val end = text.indexOf("\n\n", startIndex = start)
-	val dependencyTree = text.substring(start, end)
+	val dependencyLines = text.lines()
+		.dropWhile { !it.startsWith("+--- ") }
+		.takeWhile { it.isNotEmpty() }
 
 	val dependencyPaths = mutableSetOf<List<String>>()
 	val stack = ArrayDeque<String>()
-	for (dependencyLine in dependencyTree.lines()) {
+	for (dependencyLine in dependencyLines) {
 		val coordinateStart = dependencyLine.indexOf("--- ")
 		val coordinates = dependencyLine.substring(coordinateStart + 4)
 
