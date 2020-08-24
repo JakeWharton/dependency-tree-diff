@@ -4,6 +4,7 @@ package com.jakewharton.gradle.dependencies
 
 import java.util.ArrayDeque
 
+@JvmName("diff")
 fun dependencyTreeDiff(old: String, new: String): String {
 	val oldPaths = findDependencyPaths(old)
 	val newPaths = findDependencyPaths(new)
