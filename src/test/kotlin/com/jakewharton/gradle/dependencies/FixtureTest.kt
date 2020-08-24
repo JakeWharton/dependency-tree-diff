@@ -1,4 +1,4 @@
-package com.jakewharton.gradle.dependencies.diff
+package com.jakewharton.gradle.dependencies
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test

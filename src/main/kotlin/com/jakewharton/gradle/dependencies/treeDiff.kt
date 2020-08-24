@@ -1,22 +1,8 @@
-@file:JvmName("Main")
+@file:JvmName("DependencyTrees")
 
-package com.jakewharton.gradle.dependencies.diff
+package com.jakewharton.gradle.dependencies
 
-import java.nio.file.Paths
 import java.util.ArrayDeque
-import kotlin.system.exitProcess
-
-fun main(vararg args: String) {
-	if (args.size != 2) {
-		System.err.println("Usage: dependency-tree-diff old.txt new.txt")
-		exitProcess(1)
-	}
-
-	val old = args[0].let(Paths::get).readText()
-	val new = args[1].let(Paths::get).readText()
-
-	print(dependencyTreeDiff(old, new))
-}
 
 fun dependencyTreeDiff(old: String, new: String): String {
 	val oldPaths = findDependencyPaths(old)
@@ -74,12 +60,6 @@ private fun buildTree(paths: Iterable<List<String>>): List<Node> {
 		}
 	}
 	return rootNodes
-}
-
-private fun diffTrees(oldTree: List<Node>, newTree: List<Node>): String {
-	return buildString {
-		appendDiff(oldTree, newTree, "")
-	}
 }
 
 private fun StringBuilder.appendDiff(

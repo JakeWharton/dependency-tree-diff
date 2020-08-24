@@ -90,6 +90,21 @@ $ ./dependency-tree-diff.jar old.txt new.txt
 
 See `src/test/fixtures/` for example outputs and their expected diffs.
 
+## Install
+
+**Mac OS**
+
+```
+$ brew install JakeWharton/repo/dependency-tree-diff
+```
+
+**Other**
+
+Download standalone JAR from
+[latest release](https://github.com/JakeWharton/dependency-tree-diff/releases/latest).
+On MacOS and Linux you can `chmod +x` and execute the `.jar` directly.
+On Windows use `java -jar`.
+
 
 ## License
 
