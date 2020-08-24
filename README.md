@@ -73,7 +73,8 @@ Now, however, additional unchanged dependencies are displayed such as `androidx.
 SQLDelight runtime dependency by the RxJava 2 extensions artifact.
 
 For deep dependency chains, `-U 2` will not be enough to see all of the roots. Increasing the value
-will only show more unchanged dependencies.
+will only show more unchanged dependencies. `dependency-tree-diff` will always display the
+minimal subset needed to provide context.
 
 
 ## Usage
