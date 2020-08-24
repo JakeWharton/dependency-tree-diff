@@ -19,8 +19,8 @@ the path to the root dependency.
 +     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72 -> 1.4.0 (*)
 ```
 
-Unlike a normal `diff`, unchanged entries are not displayed unless they are a parent dependency
-to a changed. This allows you to see which immediate dependencies are impacted by a change.
+Unlike a normal `diff`, unchanged entries are displayed only when they are a parent dependency
+to one that changed.
 
 Compare the above diff to `diff -U 0`:
 
