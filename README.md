@@ -76,6 +76,11 @@ For deep dependency chains, `-U 2` will not be enough to see all of the roots. I
 will only show more unchanged dependencies. `dependency-tree-diff` will always display the
 minimal subset needed to provide context.
 
+For more information about why a diff of the dependency tree is useful see
+["Surfacing Hidden Change to Pull Requests"](https://developer.squareup.com/blog/surfacing-hidden-change-to-pull-requests/).
+To learn about how code shrinking keeps the binary as small as possible see
+["Shrinking a Kotlin binary by 99.2%"](https://jakewharton.com/shrinking-a-kotlin-binary/).
+
 
 ## Usage
 
