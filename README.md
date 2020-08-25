@@ -8,9 +8,9 @@ the path to the root dependency.
  |    +--- com.squareup.sqldelight:runtime-jvm:1.4.0
 -|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72
 -|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.72 (*)
--|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.3.72
 +|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72 -> 1.4.0
 +|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0 (*)
+-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.3.72
 +|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.3.72 -> 1.4.0
 -|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72 (*)
 +|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72 -> 1.4.0 (*)
