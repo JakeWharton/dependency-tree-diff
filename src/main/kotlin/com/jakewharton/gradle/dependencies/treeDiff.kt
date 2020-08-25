@@ -26,6 +26,9 @@ private fun findDependencyPaths(text: String): Set<List<String>> {
 	val stack = ArrayDeque<String>()
 	for (dependencyLine in dependencyLines) {
 		val coordinateStart = dependencyLine.indexOf("--- ")
+		check(coordinateStart > 0) {
+			"Unable to find coordinate delimiter: $dependencyLine"
+		}
 		val coordinates = dependencyLine.substring(coordinateStart + 4)
 
 		val coordinateDepth = coordinateStart / 5
@@ -43,18 +46,28 @@ private fun findDependencyPaths(text: String): Set<List<String>> {
 	return dependencyPaths
 }
 
-private class Node(val coordinate: String, val children: MutableList<Node>)
+private data class Node(
+	val coordinate: String,
+	val versionInfo: String,
+	val children: MutableList<Node>,
+) {
+	override fun toString() = "$coordinate:$versionInfo"
+}
 
 private fun buildTree(paths: Iterable<List<String>>): List<Node> {
 	val rootNodes = mutableListOf<Node>()
 	for (path in paths) {
 		var nodes = rootNodes
-		for (coordinate in path) {
-			val foundNode = nodes.singleOrNull { it.coordinate == coordinate }
+		for (node in path) {
+			val coordinate = node.substringBeforeLast(':')
+			val versionInfo = node.substringAfterLast(':')
+
+			val foundNode =
+				nodes.singleOrNull { it.coordinate == coordinate && it.versionInfo == versionInfo }
 			nodes = if (foundNode != null) {
 				foundNode.children
 			} else {
-				val newNode = Node(coordinate, mutableListOf())
+				val newNode = Node(coordinate, versionInfo, mutableListOf())
 				nodes.add(newNode)
 				newNode.children
 			}
@@ -75,9 +88,24 @@ private fun StringBuilder.appendDiff(
 		val newNode = newTree[newIndex]
 		when {
 			oldNode.coordinate == newNode.coordinate -> {
-				val last = oldIndex == oldTree.lastIndex && newIndex == oldTree.lastIndex
-				val nextIndent = appendNode(' ', indent, oldNode.coordinate, last)
-				appendDiff(oldNode.children, newNode.children, nextIndent)
+				if (oldNode.versionInfo == newNode.versionInfo) {
+					val last = oldIndex == oldTree.lastIndex && newIndex == oldTree.lastIndex
+					val nextIndent = appendNode(' ', indent, oldNode, last)
+					appendDiff(oldNode.children, newNode.children, nextIndent)
+				} else {
+					// Optimization for when transitive dependencies have not changed. We only display
+					// the subtree when it contains changes.
+					val childrenChanged = oldNode.children != newNode.children
+
+					val nextIndent = appendNode('-', indent, oldNode, oldIndex == oldTree.lastIndex)
+					if (childrenChanged) {
+						appendDiff(oldNode.children, emptyList(), nextIndent)
+					}
+					appendNode('+', indent, newNode, newIndex == newTree.lastIndex)
+					if (childrenChanged) {
+						appendDiff(emptyList(), newNode.children, nextIndent)
+					}
+				}
 				oldIndex++
 				newIndex++
 			}
@@ -102,7 +130,7 @@ private fun StringBuilder.appendDiff(
 private fun StringBuilder.appendNode(
 	diffChar: Char,
 	indent: String,
-	item: String,
+	item: Any?,
 	last: Boolean,
 ): String {
 	append(diffChar)
@@ -120,7 +148,7 @@ private fun StringBuilder.appendAdded(
 	indent: String,
 	last: Boolean,
 ) {
-	val nextIndent = appendNode('+', indent, node.coordinate, last)
+	val nextIndent = appendNode('+', indent, node, last)
 	appendDiff(emptyList(), node.children, nextIndent)
 }
 
@@ -129,6 +157,6 @@ private fun StringBuilder.appendRemoved(
 	indent: String,
 	last: Boolean,
 ) {
-	val nextIndent = appendNode('-', indent, node.coordinate, last)
+	val nextIndent = appendNode('-', indent, node, last)
 	appendDiff(node.children, emptyList(), nextIndent)
 }
