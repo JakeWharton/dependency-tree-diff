@@ -10,9 +10,13 @@ import java.nio.file.Paths
 import kotlin.system.exitProcess
 
 fun main(vararg args: String) {
-	if (args.size != 2) {
+	val help = "-h" in args || "--help" in args
+	if (help || args.size != 2) {
 		System.err.println("Usage: dependency-tree-diff old.txt new.txt")
-		exitProcess(1)
+		if (!help) {
+			exitProcess(1)
+		}
+		return
 	}
 
 	val old = args[0].let(Paths::get).readText()
