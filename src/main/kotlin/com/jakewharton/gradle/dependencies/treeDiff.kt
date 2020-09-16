@@ -43,6 +43,9 @@ private fun findDependencyPaths(text: String): Set<List<String>> {
 		stack.addLast(coordinates)
 	}
 
+	// The loop only commits a path when it sees the following dependency. Don't forget the last one!
+	dependencyPaths += stack.toList()
+
 	return dependencyPaths
 }
 
