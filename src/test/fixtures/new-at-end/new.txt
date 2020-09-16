@@ -1,0 +1,35 @@
++--- com.github.ben-manes:gradle-versions-plugin:0.28.0
+|    \--- com.thoughtworks.xstream:xstream:1.4.10
+|         +--- xmlpull:xmlpull:1.1.3.1
+|         \--- xpp3:xpp3_min:1.1.4c
++--- com.diffplug.spotless:spotless-plugin-gradle:5.4.0
+|    +--- com.diffplug.spotless:spotless-lib:2.5.0
+|    +--- com.diffplug.spotless:spotless-lib-extra:2.5.0
+|    |    +--- com.diffplug.spotless:spotless-lib:2.5.0
+|    |    +--- com.diffplug.durian:durian-core:1.2.0
+|    |    +--- com.diffplug.durian:durian-collect:1.2.0
+|    |    |    \--- com.diffplug.durian:durian-core:1.2.0
+|    |    +--- org.eclipse.jgit:org.eclipse.jgit:5.8.0.202006091008-r
+|    |    |    +--- com.googlecode.javaewah:JavaEWAH:1.1.7
+|    |    |    \--- org.slf4j:slf4j-api:1.7.2 -> 1.7.22
+|    |    +--- com.googlecode.concurrent-trees:concurrent-trees:2.6.1
+|    |    \--- org.codehaus.groovy:groovy-xml:3.0.3
+|    |         \--- org.codehaus.groovy:groovy:3.0.3
+|    +--- com.diffplug.durian:durian-core:1.2.0
+|    +--- com.diffplug.durian:durian-io:1.2.0
+|    |    +--- com.diffplug.durian:durian-core:1.2.0
+|    |    \--- com.diffplug.durian:durian-collect:1.2.0 (*)
+|    +--- com.diffplug.durian:durian-collect:1.2.0 (*)
+|    \--- org.eclipse.jgit:org.eclipse.jgit:5.8.0.202006091008-r (*)
+\--- com.autonomousapps:dependency-analysis-gradle-plugin:0.59.0
+     +--- org.jetbrains.kotlin:kotlin-bom:1.3.72 -> 1.4.0 (*)
+     +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72 -> 1.4.10 (*)
+     +--- com.squareup.moshi:moshi:1.9.2 -> 1.9.3 (*)
+     +--- com.squareup.moshi:moshi-kotlin:1.9.2
+     |    +--- com.squareup.moshi:moshi:1.9.2 -> 1.9.3 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.50 -> 1.4.10 (*)
+     |    \--- org.jetbrains.kotlin:kotlin-reflect:1.3.50 -> 1.4.10 (*)
+     +--- org.jetbrains.kotlin:kotlin-reflect:1.3.72 -> 1.4.10 (*)
+     \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.1.0
+          \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.31 -> 1.4.10 (*)
+
