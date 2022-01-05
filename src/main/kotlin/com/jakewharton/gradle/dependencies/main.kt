@@ -4,9 +4,9 @@ package com.jakewharton.gradle.dependencies
 
 import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
-import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
+import kotlin.io.path.readBytes
 import kotlin.system.exitProcess
 
 fun main(vararg args: String) {
@@ -25,8 +25,8 @@ fun main(vararg args: String) {
 	print(dependencyTreeDiff(old, new))
 }
 
-// TODO replace with https://youtrack.jetbrains.com/issue/KT-19192
 @Suppress("NOTHING_TO_INLINE")
 private inline fun Path.readText(charset: Charset = StandardCharsets.UTF_8): String {
-	return Files.readAllBytes(this).toString(charset)
+	// stdlib's Path#readText uses an input stream, which increases the binary size by around 150%
+	return readBytes().toString(charset)
 }
