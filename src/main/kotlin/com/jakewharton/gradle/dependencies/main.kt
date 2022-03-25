@@ -11,18 +11,50 @@ import kotlin.system.exitProcess
 
 fun main(vararg args: String) {
 	val help = "-h" in args || "--help" in args
-	if (help || args.size != 2) {
-		System.err.println("Usage: dependency-tree-diff old.txt new.txt")
-		if (!help) {
-			exitProcess(1)
+	val diffCommand = "diff"
+	val flattenCommand = "flatten"
+
+	when {
+		help -> printHelp(isWrongInput = false)
+		args.size < 2 -> printHelp(isWrongInput = true)
+		args.firstOrNull() == diffCommand -> {
+			val flatten = args[1] in setOf("-f", "--flatten")
+			val argsOffset = if (flatten) 2 else 1
+			if (argsOffset + 2 != args.size) {
+				printHelp(isWrongInput = true)
+			}
+			val old = args[argsOffset].let(Paths::get).readText()
+			val new = args[argsOffset + 1].let(Paths::get).readText()
+			print(
+				if (flatten) {
+					dependencyFlatChanges(old, new)
+				} else {
+					dependencyTreeDiff(old, new)
+				}
+			)
 		}
-		return
+		args.firstOrNull() == flattenCommand -> {
+			if (args.size != 2) {
+				printHelp(isWrongInput = true)
+			}
+			val dependencies = args[1].let(Paths::get).readText()
+			print(flatDependencies(dependencies))
+		}
 	}
+}
 
-	val old = args[0].let(Paths::get).readText()
-	val new = args[1].let(Paths::get).readText()
-
-	print(dependencyTreeDiff(old, new))
+private inline fun printHelp(isWrongInput: Boolean) {
+	val usage = "Usage: dependency-tree-diff <command> [<args>]\n" +
+		"Commands:\n" +
+		"    diff [-f | --flatten] old.txt new.txt - print diff for 2 dependency files.\n" +
+		"        -f flag generates list of changed, removed, and added dependencies.\n" +
+		"\n" +
+		"    flatten deps.txt - transform dependency tree to flat list of libraries."
+	System.err.println(usage)
+	if (isWrongInput) {
+		exitProcess(1)
+	}
+	return
 }
 
 // TODO replace with https://youtrack.jetbrains.com/issue/KT-19192

@@ -1,0 +1,20 @@
+VERSION CHANGE
+
+androidx.compose.animation:animation-core:1.1.0 -> 1.1.1
+androidx.compose.animation:animation:1.1.0 -> 1.1.1
+androidx.compose.foundation:foundation-layout:1.1.0 -> 1.1.1
+androidx.compose.foundation:foundation:1.1.0 -> 1.1.1
+androidx.compose.material:material-icons-core:1.1.0 -> 1.1.1
+androidx.compose.material:material-ripple:1.1.0 -> 1.1.1
+androidx.compose.material:material:1.1.0 -> 1.1.1
+androidx.compose.runtime:runtime-saveable:1.1.0 -> 1.1.1
+androidx.compose.runtime:runtime:1.1.0 -> 1.1.1
+androidx.compose.ui:ui-geometry:1.1.0 -> 1.1.1
+androidx.compose.ui:ui-graphics:1.1.0 -> 1.1.1
+androidx.compose.ui:ui-text:1.1.0 -> 1.1.1
+androidx.compose.ui:ui-tooling-data:1.1.0 -> 1.1.1
+androidx.compose.ui:ui-tooling-preview:1.1.0 -> 1.1.1
+androidx.compose.ui:ui-tooling:1.1.0 -> 1.1.1
+androidx.compose.ui:ui-unit:1.1.0 -> 1.1.1
+androidx.compose.ui:ui-util:1.1.0 -> 1.1.1
+androidx.compose.ui:ui:1.1.0 -> 1.1.1

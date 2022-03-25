@@ -1,0 +1,3 @@
+VERSION CHANGE
+
+com.squareup.okhttp3:okhttp:4.8.0 -> 4.8.1

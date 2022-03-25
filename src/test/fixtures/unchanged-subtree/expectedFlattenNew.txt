@@ -1,0 +1,5 @@
+com.google.firebase:firebase-perf:18.0.0
+com.squareup.okhttp3:okhttp:4.8.1
+com.squareup.okio:okio:2.7.0
+org.jetbrains.kotlin:kotlin-stdlib-common:1.3.72
+org.jetbrains.kotlin:kotlin-stdlib:1.3.72

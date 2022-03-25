@@ -1,0 +1,324 @@
+ \--- project :sample:app
+      +--- project :sample:core:modo:modo-render-android-compose
+-     |    +--- androidx.compose.ui:ui:1.1.0-rc01 -> 1.1.0
+-     |    |    +--- androidx.compose.runtime:runtime-saveable:1.1.0
+-     |    |    |    +--- androidx.compose.runtime:runtime:1.1.0
+-     |    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2
+-     |    |    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+-     |    |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30 -> 1.6.10 (*)
+-     |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-     |    |    +--- androidx.compose.ui:ui-geometry:1.1.0
+-     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |    |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |    |    |    +--- androidx.compose.ui:ui-util:1.1.0
+-     |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-     |    |    +--- androidx.compose.ui:ui-graphics:1.1.0
+-     |    |    |    +--- androidx.annotation:annotation:1.2.0
+-     |    |    |    +--- androidx.compose.ui:ui-unit:1.1.0
+-     |    |    |    |    +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
+-     |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-     |    |    |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |    |    |    |    \--- androidx.compose.ui:ui-util:1.1.0 (*)
+-     |    |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |    |    |    +--- androidx.compose.ui:ui-util:1.1.0 (*)
+-     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+-     |    |    +--- androidx.compose.ui:ui-text:1.1.0
+-     |    |    |    +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
+-     |    |    |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+-     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+-     |    |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |    |    |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
+-     |    |    |    +--- androidx.compose.ui:ui-util:1.1.0 (*)
+-     |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-     |    |    |    +--- androidx.collection:collection:1.1.0 (*)
+-     |    |    |    \--- androidx.core:core:1.5.0 -> 1.7.0 (*)
+-     |    |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+-     |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+-     |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+-     |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |    |    +--- androidx.compose.ui:ui-util:1.1.0 (*)
+-     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-     |    |    +--- androidx.autofill:autofill:1.0.0
+-     |    |    |    \--- androidx.core:core:1.1.0 -> 1.7.0 (*)
+-     |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2 (*)
+-     |    |    +--- androidx.savedstate:savedstate:1.1.0 (*)
+-     |    |    +--- androidx.lifecycle:lifecycle-common-java8:2.3.0 -> 2.4.0 (*)
+-     |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.0 -> 2.4.0 (*)
+-     |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 -> 2.4.0 (*)
+-     |    |    \--- androidx.profileinstaller:profileinstaller:1.1.0
+-     |    |         +--- androidx.annotation:annotation:1.2.0
+-     |    |         \--- androidx.startup:startup-runtime:1.0.0
+-     |    |              +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |    |              \--- androidx.tracing:tracing:1.0.0
+-     |    |                   \--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |    +--- androidx.compose.ui:ui:1.1.0-rc01 -> 1.1.1
++     |    |    +--- androidx.compose.runtime:runtime-saveable:1.1.1
++     |    |    |    +--- androidx.compose.runtime:runtime:1.1.1
++     |    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2
++     |    |    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
++     |    |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30 -> 1.6.10 (*)
++     |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    |    +--- androidx.compose.ui:ui-geometry:1.1.1
++     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |    |    |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |    |    |    +--- androidx.compose.ui:ui-util:1.1.1
++     |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    |    +--- androidx.compose.ui:ui-graphics:1.1.1
++     |    |    |    +--- androidx.annotation:annotation:1.2.0
++     |    |    |    +--- androidx.compose.ui:ui-unit:1.1.1
++     |    |    |    |    +--- androidx.compose.ui:ui-geometry:1.1.1 (*)
++     |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    |    |    |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |    |    |    |    \--- androidx.compose.ui:ui-util:1.1.1 (*)
++     |    |    |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |    |    |    +--- androidx.compose.ui:ui-util:1.1.1 (*)
++     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++     |    |    +--- androidx.compose.ui:ui-text:1.1.1
++     |    |    |    +--- androidx.compose.ui:ui-graphics:1.1.1 (*)
++     |    |    |    +--- androidx.compose.ui:ui-unit:1.1.1 (*)
++     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++     |    |    |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |    |    |    +--- androidx.compose.runtime:runtime-saveable:1.1.1 (*)
++     |    |    |    +--- androidx.compose.ui:ui-util:1.1.1 (*)
++     |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    |    |    +--- androidx.collection:collection:1.1.0 (*)
++     |    |    |    \--- androidx.core:core:1.5.0 -> 1.7.0 (*)
++     |    |    +--- androidx.compose.ui:ui-unit:1.1.1 (*)
++     |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++     |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
++     |    |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |    |    +--- androidx.compose.ui:ui-util:1.1.1 (*)
++     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    |    +--- androidx.autofill:autofill:1.0.0
++     |    |    |    \--- androidx.core:core:1.1.0 -> 1.7.0 (*)
++     |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2 (*)
++     |    |    +--- androidx.savedstate:savedstate:1.1.0 (*)
++     |    |    +--- androidx.lifecycle:lifecycle-common-java8:2.3.0 -> 2.4.0 (*)
++     |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.0 -> 2.4.0 (*)
++     |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 -> 2.4.0 (*)
++     |    |    \--- androidx.profileinstaller:profileinstaller:1.1.0
++     |    |         +--- androidx.annotation:annotation:1.2.0
++     |    |         \--- androidx.startup:startup-runtime:1.0.0
++     |    |              +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |    |              \--- androidx.tracing:tracing:1.0.0
++     |    |                   \--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |    \--- androidx.compose.foundation:foundation:1.1.0-rc01 -> 1.1.0
+-     |         +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |         +--- androidx.compose.animation:animation:1.1.0
+-     |         |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |         |    +--- androidx.compose.animation:animation-core:1.1.0
+-     |         |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |         |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+-     |         |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |         |    |    +--- androidx.compose.ui:ui:1.0.0 -> 1.1.0 (*)
+-     |         |    |    +--- androidx.compose.ui:ui-unit:1.0.0 -> 1.1.0 (*)
+-     |         |    |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.0 (*)
+-     |         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-     |         |    +--- androidx.compose.foundation:foundation-layout:1.0.0 -> 1.1.0
+-     |         |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+-     |         |    |    +--- androidx.compose.ui:ui:1.1.0 (*)
+-     |         |    |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+-     |         |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |         |    |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.0 (*)
+-     |         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+-     |         |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |         |    +--- androidx.compose.ui:ui:1.0.0 -> 1.1.0 (*)
+-     |         |    +--- androidx.compose.ui:ui-geometry:1.0.0 -> 1.1.0 (*)
+-     |         |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.0 (*)
+-     |         |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+-     |         +--- androidx.compose.runtime:runtime:1.1.0 (*)
+-     |         +--- androidx.compose.ui:ui:1.1.0 (*)
+-     |         +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+-     |         +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
+-     |         +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
+-     |         +--- androidx.compose.ui:ui-text:1.0.0 -> 1.1.0 (*)
+-     |         \--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.0 (*)
++     |    \--- androidx.compose.foundation:foundation:1.1.0-rc01 -> 1.1.1
++     |         +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |         +--- androidx.compose.animation:animation:1.1.1
++     |         |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |         |    +--- androidx.compose.animation:animation-core:1.1.1
++     |         |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |         |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
++     |         |    |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |         |    |    +--- androidx.compose.ui:ui:1.0.0 -> 1.1.1 (*)
++     |         |    |    +--- androidx.compose.ui:ui-unit:1.0.0 -> 1.1.1 (*)
++     |         |    |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.1 (*)
++     |         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |         |    +--- androidx.compose.foundation:foundation-layout:1.0.0 -> 1.1.1
++     |         |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
++     |         |    |    +--- androidx.compose.ui:ui:1.1.1 (*)
++     |         |    |    +--- androidx.compose.ui:ui-unit:1.1.1 (*)
++     |         |    |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |         |    |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.1 (*)
++     |         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++     |         |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |         |    +--- androidx.compose.ui:ui:1.0.0 -> 1.1.1 (*)
++     |         |    +--- androidx.compose.ui:ui-geometry:1.0.0 -> 1.1.1 (*)
++     |         |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.1 (*)
++     |         |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++     |         +--- androidx.compose.runtime:runtime:1.1.1 (*)
++     |         +--- androidx.compose.ui:ui:1.1.1 (*)
++     |         +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++     |         +--- androidx.compose.foundation:foundation-layout:1.1.1 (*)
++     |         +--- androidx.compose.ui:ui-graphics:1.1.1 (*)
++     |         +--- androidx.compose.ui:ui-text:1.0.0 -> 1.1.1 (*)
++     |         \--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.1 (*)
+      +--- project :sample:features:counter:impl
+      |    +--- project :teamaker:compose-android-util
+-     |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
++     |    |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
+-     |    |    \--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
++     |    |    \--- androidx.compose.runtime:runtime-saveable:1.1.1 (*)
+-     |    +--- androidx.compose.foundation:foundation:1.1.0 (*)
++     |    +--- androidx.compose.foundation:foundation:1.1.1 (*)
+-     |    +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
++     |    +--- androidx.compose.foundation:foundation-layout:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-geometry:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-graphics:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-unit:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-text:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-text:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-tooling:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling:1.1.1
+-     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.1
+-     |    +--- androidx.compose.ui:ui-tooling-data:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling-data:1.1.1
+-     |    +--- androidx.compose.animation:animation:1.1.0 (*)
++     |    +--- androidx.compose.animation:animation:1.1.1 (*)
+-     |    +--- androidx.compose.animation:animation-core:1.1.0 (*)
++     |    +--- androidx.compose.animation:animation-core:1.1.1 (*)
+-     |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
++     |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
+-     |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
++     |    +--- androidx.compose.runtime:runtime-saveable:1.1.1 (*)
+-     |    +--- androidx.compose.material:material:1.1.0
++     |    +--- androidx.compose.material:material:1.1.1
+-     |    +--- androidx.compose.material:material-icons-core:1.1.0
++     |    +--- androidx.compose.material:material-icons-core:1.1.1
+-     |    \--- androidx.compose.material:material-ripple:1.1.0
++     |    \--- androidx.compose.material:material-ripple:1.1.1
+      +--- project :sample:features:learnCompose:impl
+-     |    +--- androidx.compose.foundation:foundation:1.1.0 (*)
++     |    +--- androidx.compose.foundation:foundation:1.1.1 (*)
+-     |    +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
++     |    +--- androidx.compose.foundation:foundation-layout:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-geometry:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-graphics:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-unit:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-text:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-text:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-tooling:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling:1.1.1
+-     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.1
+-     |    +--- androidx.compose.ui:ui-tooling-data:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling-data:1.1.1
+-     |    +--- androidx.compose.animation:animation:1.1.0 (*)
++     |    +--- androidx.compose.animation:animation:1.1.1 (*)
+-     |    +--- androidx.compose.animation:animation-core:1.1.0 (*)
++     |    +--- androidx.compose.animation:animation-core:1.1.1 (*)
+-     |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
++     |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
+-     |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
++     |    +--- androidx.compose.runtime:runtime-saveable:1.1.1 (*)
+-     |    +--- androidx.compose.material:material:1.1.0
++     |    +--- androidx.compose.material:material:1.1.1
+-     |    +--- androidx.compose.material:material-icons-core:1.1.0
++     |    +--- androidx.compose.material:material-icons-core:1.1.1
+-     |    \--- androidx.compose.material:material-ripple:1.1.0
++     |    \--- androidx.compose.material:material-ripple:1.1.1
+      +--- project :sample:features:game:impl
+-     |    +--- androidx.compose.foundation:foundation:1.1.0 (*)
++     |    +--- androidx.compose.foundation:foundation:1.1.1 (*)
+-     |    +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
++     |    +--- androidx.compose.foundation:foundation-layout:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-geometry:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-graphics:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-unit:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-text:1.1.0 (*)
++     |    +--- androidx.compose.ui:ui-text:1.1.1 (*)
+-     |    +--- androidx.compose.ui:ui-tooling:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling:1.1.1
+-     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.1
+-     |    +--- androidx.compose.ui:ui-tooling-data:1.1.0
++     |    +--- androidx.compose.ui:ui-tooling-data:1.1.1
+-     |    +--- androidx.compose.animation:animation:1.1.0 (*)
++     |    +--- androidx.compose.animation:animation:1.1.1 (*)
+-     |    +--- androidx.compose.animation:animation-core:1.1.0 (*)
++     |    +--- androidx.compose.animation:animation-core:1.1.1 (*)
+-     |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
++     |    +--- androidx.compose.runtime:runtime:1.1.1 (*)
+-     |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
++     |    +--- androidx.compose.runtime:runtime-saveable:1.1.1 (*)
+-     |    +--- androidx.compose.material:material:1.1.0
++     |    +--- androidx.compose.material:material:1.1.1
+-     |    +--- androidx.compose.material:material-icons-core:1.1.0
++     |    +--- androidx.compose.material:material-icons-core:1.1.1
+-     |    \--- androidx.compose.material:material-ripple:1.1.0
++     |    \--- androidx.compose.material:material-ripple:1.1.1
+-     +--- androidx.compose.foundation:foundation:1.1.0 (*)
++     +--- androidx.compose.foundation:foundation:1.1.1 (*)
+-     +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
++     +--- androidx.compose.foundation:foundation-layout:1.1.1 (*)
+-     +--- androidx.compose.ui:ui:1.1.0 (*)
++     +--- androidx.compose.ui:ui:1.1.1 (*)
+-     +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
++     +--- androidx.compose.ui:ui-geometry:1.1.1 (*)
+-     +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
++     +--- androidx.compose.ui:ui-graphics:1.1.1 (*)
+-     +--- androidx.compose.ui:ui-unit:1.1.0 (*)
++     +--- androidx.compose.ui:ui-unit:1.1.1 (*)
+-     +--- androidx.compose.ui:ui-text:1.1.0 (*)
++     +--- androidx.compose.ui:ui-text:1.1.1 (*)
+-     +--- androidx.compose.ui:ui-tooling:1.1.0
++     +--- androidx.compose.ui:ui-tooling:1.1.1
+-     +--- androidx.compose.ui:ui-tooling-preview:1.1.0
++     +--- androidx.compose.ui:ui-tooling-preview:1.1.1
+-     +--- androidx.compose.ui:ui-tooling-data:1.1.0
++     +--- androidx.compose.ui:ui-tooling-data:1.1.1
+-     +--- androidx.compose.animation:animation:1.1.0 (*)
++     +--- androidx.compose.animation:animation:1.1.1 (*)
+-     +--- androidx.compose.animation:animation-core:1.1.0 (*)
++     +--- androidx.compose.animation:animation-core:1.1.1 (*)
+-     +--- androidx.compose.runtime:runtime:1.1.0 (*)
++     +--- androidx.compose.runtime:runtime:1.1.1 (*)
+-     +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
++     +--- androidx.compose.runtime:runtime-saveable:1.1.1 (*)
+-     +--- androidx.compose.material:material:1.1.0
++     +--- androidx.compose.material:material:1.1.1
+-     +--- androidx.compose.material:material-icons-core:1.1.0
++     +--- androidx.compose.material:material-icons-core:1.1.1
+-     \--- androidx.compose.material:material-ripple:1.1.0
++     \--- androidx.compose.material:material-ripple:1.1.1

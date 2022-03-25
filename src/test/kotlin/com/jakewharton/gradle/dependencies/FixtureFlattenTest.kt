@@ -8,13 +8,19 @@ import org.junit.runners.Parameterized.Parameters
 import java.io.File
 
 @RunWith(Parameterized::class)
-class FixtureTest(private val fixtureDir: File) {
-	@Test fun run() {
-		val old = fixtureDir.resolve("old.txt").readText()
+class FixtureFlattenTest(private val fixtureDir: File) {
+	@Test fun runNew() {
 		val new = fixtureDir.resolve("new.txt").readText()
-		val expected = fixtureDir.resolve("expectedDiff.txt").readText()
-		val actual = dependencyTreeDiff(old, new)
-		assertThat(actual).isEqualTo(expected)
+		val expected = fixtureDir.resolve("expectedFlattenNew.txt").readText()
+		val actual = flatDependencies(new)
+		assertThat(actual.trim()).isEqualTo(expected.trim())
+	}
+
+	@Test fun runOld() {
+		val old = fixtureDir.resolve("old.txt").readText()
+		val expected = fixtureDir.resolve("expectedFlattenOld.txt").readText()
+		val actual = flatDependencies(old)
+		assertThat(actual.trim()).isEqualTo(expected.trim())
 	}
 
 	companion object {

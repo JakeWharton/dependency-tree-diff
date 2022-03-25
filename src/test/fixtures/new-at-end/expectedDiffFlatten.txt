@@ -1,0 +1,10 @@
+NEW LIBRARIES
+
+com.autonomousapps:dependency-analysis-gradle-plugin:0.59.0
+com.squareup.moshi:moshi-kotlin:1.9.2
+com.squareup.moshi:moshi:1.9.3
+org.jetbrains.kotlin:kotlin-bom:1.4.0
+org.jetbrains.kotlin:kotlin-reflect:1.4.10
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.10
+org.jetbrains.kotlin:kotlin-stdlib:1.4.10
+org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.1.0

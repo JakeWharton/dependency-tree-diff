@@ -5,6 +5,7 @@ buildscript {
 }
 
 apply plugin: 'org.jetbrains.kotlin.jvm'
+apply plugin: 'application'
 
 configurations {
 	r8
@@ -15,6 +16,10 @@ dependencies {
 	testImplementation 'com.google.truth:truth:1.0.1'
 
 	r8 'com.android.tools:r8:2.0.99'
+}
+
+application {
+	mainClass.set("com.jakewharton.gradle.dependencies.DependencyTreeDiff")
 }
 
 def fatJarProvider = tasks.register('fatJar', Jar) { task ->

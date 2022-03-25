@@ -1,0 +1,585 @@
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+> Task :buildSrc:forma:target:compileKotlin
+> Task :buildSrc:forma:target:compileJava NO-SOURCE
+> Task :buildSrc:forma:validation:compileKotlin
+> Task :buildSrc:forma:validation:compileJava NO-SOURCE
+
+> Task :buildSrc:forma:deps-core:compileKotlin
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/deps-core/src/main/java/dependencies.kt: (55, 66): Arguments execution order is going to be changed in a future release. The expression for named vararg argument will be executed in the order in which it was listed, not at the end. See KT-17691 for more details.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/deps-core/src/main/java/dependencies.kt: (55, 75): Redundant spread (*) operator
+
+> Task :buildSrc:forma:deps-core:compileJava NO-SOURCE
+
+> Task :buildSrc:forma:android:compileKotlin
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidApp.kt: (20, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidApp.kt: (21, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidBinary.kt: (31, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidLibrary.kt: (24, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidLibrary.kt: (25, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidNative.kt: (19, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidNative.kt: (20, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidRes.kt: (21, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidRes.kt: (22, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidTestUtil.kt: (19, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidTestUtil.kt: (20, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidUtil.kt: (39, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/androidUtil.kt: (40, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/api.kt: (15, 5): Parameter 'packageName' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/api.kt: (16, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/dataBinding.kt: (39, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/dataBinding.kt: (40, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/dataBinding.kt: (87, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/dataBinding.kt: (88, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/library.kt: (22, 5): Parameter 'packageName' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/library.kt: (24, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/library.kt: (25, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/testUtil.kt: (17, 5): Parameter 'packageName' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/testUtil.kt: (18, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/testUtil.kt: (19, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (29, 13): 'compileSdkVersion(Int): Unit' is deprecated. Replaced by compileSdk
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (53, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (54, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (55, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (56, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (57, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (58, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (59, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (60, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidBinary.kt: (61, 17): 'exclude(String): Unit' is deprecated. This method is deprecated. Use resources.excludes.add() or jniLibs.excludes.add() instead. Use jniLibs.excludes.add() for .so file patterns, and use resources.excludes.add() for all other file patterns.
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidLibrary.kt: (43, 13): 'compileSdkVersion(Int): Unit' is deprecated. Replaced by compileSdk
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidNative.kt: (29, 34): Parameter 'feature' is never used, could be renamed to _
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/feature/AndroidNative.kt: (31, 13): 'compileSdkVersion(Int): Unit' is deprecated. Replaced by compileSdk
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/utils/android.kt: (25, 5): 'minSdkVersion(Int): Unit' is deprecated. Overrides deprecated member in 'com.android.build.api.dsl.ApplicationBaseFlavor'. Replaced by minSdk property
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/utils/android.kt: (26, 5): 'targetSdkVersion(Int): Unit' is deprecated. Overrides deprecated member in 'com.android.build.api.dsl.ApplicationBaseFlavor'. Replaced by targetSdk property
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/tools/forma/android/visibility/Visibility.kt: (3, 25): Parameter 'name' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/uiLibrary.kt: (30, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/uiLibrary.kt: (31, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/util.kt: (33, 5): Parameter 'packageName' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/util.kt: (34, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/util.kt: (35, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/viewBinding.kt: (32, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/viewBinding.kt: (33, 5): Parameter 'visibility' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/widget.kt: (24, 5): Parameter 'owner' is never used
+w: /Users/ikarenkov/Documents/development/TeaMaker/forma/android/src/main/java/widget.kt: (25, 5): Parameter 'visibility' is never used
+
+> Task :buildSrc:forma:android:compileJava NO-SOURCE
+> Task :buildSrc:forma:android:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:forma:android:processResources UP-TO-DATE
+> Task :buildSrc:forma:android:classes UP-TO-DATE
+> Task :buildSrc:forma:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :buildSrc:forma:android:jar UP-TO-DATE
+> Task :buildSrc:forma:deps-core:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:forma:deps-core:processResources NO-SOURCE
+> Task :buildSrc:forma:deps-core:classes UP-TO-DATE
+> Task :buildSrc:forma:deps-core:inspectClassesForKotlinIC UP-TO-DATE
+> Task :buildSrc:forma:deps-core:jar UP-TO-DATE
+> Task :buildSrc:forma:target:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:forma:target:processResources NO-SOURCE
+> Task :buildSrc:forma:target:classes UP-TO-DATE
+> Task :buildSrc:forma:target:inspectClassesForKotlinIC UP-TO-DATE
+> Task :buildSrc:forma:target:jar UP-TO-DATE
+> Task :buildSrc:compileKotlin
+> Task :buildSrc:compileJava NO-SOURCE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:processResources NO-SOURCE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:inspectClassesForKotlinIC UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+> Task :buildSrc:assemble UP-TO-DATE
+> Task :buildSrc:compileTestKotlin NO-SOURCE
+> Task :buildSrc:forma:validation:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:forma:validation:processResources NO-SOURCE
+> Task :buildSrc:forma:validation:classes UP-TO-DATE
+> Task :buildSrc:forma:validation:inspectClassesForKotlinIC UP-TO-DATE
+> Task :buildSrc:forma:validation:jar UP-TO-DATE
+> Task :buildSrc:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:compileTestJava NO-SOURCE
+> Task :buildSrc:compileTestGroovy NO-SOURCE
+> Task :buildSrc:processTestResources NO-SOURCE
+> Task :buildSrc:testClasses UP-TO-DATE
+> Task :buildSrc:test NO-SOURCE
+> Task :buildSrc:validatePlugins UP-TO-DATE
+> Task :buildSrc:check UP-TO-DATE
+> Task :buildSrc:build UP-TO-DATE
+> Task :buildSrc:forma:android:assemble UP-TO-DATE
+> Task :buildSrc:forma:android:compileTestKotlin NO-SOURCE
+> Task :buildSrc:forma:android:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:forma:android:compileTestJava NO-SOURCE
+> Task :buildSrc:forma:android:processTestResources NO-SOURCE
+> Task :buildSrc:forma:android:testClasses UP-TO-DATE
+> Task :buildSrc:forma:android:test NO-SOURCE
+> Task :buildSrc:forma:android:validatePlugins UP-TO-DATE
+> Task :buildSrc:forma:android:check UP-TO-DATE
+> Task :buildSrc:forma:android:build UP-TO-DATE
+> Task :buildSrc:forma:deps:compileKotlin
+> Task :buildSrc:forma:deps:compileJava NO-SOURCE
+> Task :buildSrc:forma:deps:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:forma:deps:processResources UP-TO-DATE
+> Task :buildSrc:forma:deps:classes UP-TO-DATE
+> Task :buildSrc:forma:deps:inspectClassesForKotlinIC UP-TO-DATE
+> Task :buildSrc:forma:deps:jar UP-TO-DATE
+> Task :buildSrc:forma:deps:publishPluginJar UP-TO-DATE
+> Task :buildSrc:forma:deps:javadoc NO-SOURCE
+> Task :buildSrc:forma:deps:publishPluginJavaDocsJar UP-TO-DATE
+> Task :buildSrc:forma:deps:assemble UP-TO-DATE
+> Task :buildSrc:forma:deps:compileTestKotlin NO-SOURCE
+> Task :buildSrc:forma:deps:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:forma:deps:compileTestJava NO-SOURCE
+> Task :buildSrc:forma:deps:processTestResources NO-SOURCE
+> Task :buildSrc:forma:deps:testClasses UP-TO-DATE
+> Task :buildSrc:forma:deps:test NO-SOURCE
+> Task :buildSrc:forma:deps:validatePlugins UP-TO-DATE
+> Task :buildSrc:forma:deps:check UP-TO-DATE
+> Task :buildSrc:forma:deps:build UP-TO-DATE
+> Task :buildSrc:forma:deps-core:assemble UP-TO-DATE
+> Task :buildSrc:forma:deps-core:compileTestKotlin NO-SOURCE
+> Task :buildSrc:forma:deps-core:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:forma:deps-core:compileTestJava NO-SOURCE
+> Task :buildSrc:forma:deps-core:processTestResources NO-SOURCE
+> Task :buildSrc:forma:deps-core:testClasses UP-TO-DATE
+> Task :buildSrc:forma:deps-core:test NO-SOURCE
+> Task :buildSrc:forma:deps-core:validatePlugins UP-TO-DATE
+> Task :buildSrc:forma:deps-core:check UP-TO-DATE
+> Task :buildSrc:forma:deps-core:build UP-TO-DATE
+> Task :buildSrc:forma:target:assemble UP-TO-DATE
+> Task :buildSrc:forma:target:compileTestKotlin NO-SOURCE
+> Task :buildSrc:forma:target:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:forma:target:compileTestJava NO-SOURCE
+> Task :buildSrc:forma:target:processTestResources NO-SOURCE
+> Task :buildSrc:forma:target:testClasses UP-TO-DATE
+> Task :buildSrc:forma:target:test NO-SOURCE
+> Task :buildSrc:forma:target:validatePlugins UP-TO-DATE
+> Task :buildSrc:forma:target:check UP-TO-DATE
+> Task :buildSrc:forma:target:build UP-TO-DATE
+> Task :buildSrc:forma:validation:assemble UP-TO-DATE
+> Task :buildSrc:forma:validation:compileTestKotlin NO-SOURCE
+> Task :buildSrc:forma:validation:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:forma:validation:compileTestJava NO-SOURCE
+> Task :buildSrc:forma:validation:processTestResources NO-SOURCE
+> Task :buildSrc:forma:validation:testClasses UP-TO-DATE
+> Task :buildSrc:forma:validation:test NO-SOURCE
+> Task :buildSrc:forma:validation:validatePlugins UP-TO-DATE
+> Task :buildSrc:forma:validation:check UP-TO-DATE
+> Task :buildSrc:forma:validation:build UP-TO-DATE
+
+> Configure project :sample:core:modo:modo
+Kotlin Multiplatform Projects are an Alpha feature. See: https://kotlinlang.org/docs/reference/evolution/components-stability.html. To hide this message, add 'kotlin.mpp.stability.nowarn=true' to the Gradle properties.
+
+
+The Kotlin source set androidAndroidTestRelease was configured but not added to any Kotlin compilation. You can add a source set to a target's compilation by connecting it with the compilation's default source set using 'dependsOn'.
+See https://kotlinlang.org/docs/reference/building-mpp-with-gradle.html#connecting-source-sets
+
+> Task :sample:binary:dependencies
+
+------------------------------------------------------------
+Project ':sample:binary'
+------------------------------------------------------------
+
+releaseRuntimeClasspath - Resolved configuration for runtime for variant: release
+\--- project :sample:app
+     +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10
+     |    |    +--- org.jetbrains:annotations:13.0 -> 20.0.0
+     |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10
+     |         \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     +--- org.jetbrains:annotations:20.0.0
+     +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10 (*)
+     +--- project :teamaker:core-library
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    +--- org.jetbrains:annotations:20.0.0
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10 (*)
+     |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2
+     |         \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2
+     |              +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30 -> 1.6.10 (*)
+     |              \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.30 -> 1.6.10
+     +--- project :teamaker:instanceKeeper-android-util
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    +--- org.jetbrains:annotations:20.0.0
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10 (*)
+     |    +--- project :teamaker:core-library (*)
+     |    +--- androidx.fragment:fragment:1.4.0
+     |    +--- androidx.annotation:annotation:1.2.0
+     |    +--- androidx.activity:activity:1.4.0
+     |    +--- androidx.core:core:1.7.0
+     |    |    +--- androidx.annotation:annotation:1.2.0
+     |    |    +--- androidx.annotation:annotation-experimental:1.1.0
+     |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.1 -> 2.4.0
+     |    |    |    +--- androidx.arch.core:core-runtime:2.1.0
+     |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    |    \--- androidx.arch.core:core-common:2.1.0
+     |    |    |    |         \--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    +--- androidx.lifecycle:lifecycle-common:2.4.0
+     |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    |    \--- androidx.lifecycle:lifecycle-common-java8:2.4.0 (c)
+     |    |    |    +--- androidx.arch.core:core-common:2.1.0 (*)
+     |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    +--- androidx.versionedparcelable:versionedparcelable:1.1.1
+     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    \--- androidx.collection:collection:1.0.0 -> 1.1.0
+     |    |    |         \--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    +--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
+     |    |    \--- androidx.concurrent:concurrent-futures:1.0.0
+     |    |         +--- com.google.guava:listenablefuture:1.0
+     |    |         \--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    +--- androidx.lifecycle:lifecycle-runtime:2.4.0 (*)
+     |    +--- androidx.arch.core:core-common:2.1.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-common:2.4.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-common-java8:2.4.0
+     |    |    +--- androidx.lifecycle:lifecycle-common:2.4.0 (*)
+     |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    +--- androidx.versionedparcelable:versionedparcelable:1.1.0 -> 1.1.1 (*)
+     |    +--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-viewmodel:2.4.0
+     |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.30 -> 1.6.10 (*)
+     |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.4.0
+     |    +--- androidx.lifecycle:lifecycle-livedata-core:2.4.0
+     |    +--- androidx.arch.core:core-runtime:2.1.0 (*)
+     |    +--- androidx.savedstate:savedstate:1.1.0
+     |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    +--- androidx.arch.core:core-common:2.0.1 -> 2.1.0 (*)
+     |    |    \--- androidx.lifecycle:lifecycle-common:2.0.0 -> 2.4.0 (*)
+     |    +--- androidx.savedstate:savedstate-ktx:1.1.0
+     |    +--- androidx.loader:loader:1.1.0
+     |    +--- androidx.viewpager:viewpager:1.0.0
+     |    +--- androidx.customview:customview:1.1.0
+     |    +--- com.arkivanov.essenty:instance-keeper:0.2.2
+     |    |    \--- com.arkivanov.essenty:instance-keeper-android:0.2.2
+     |    \--- com.arkivanov.essenty:utils-internal:0.2.2
+     |         \--- com.arkivanov.essenty:utils-internal-android:0.2.2
+     +--- project :sample:core:modo:modo-render-android-compose
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    +--- project :sample:core:modo:modo
+     |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    +--- androidx.compose.ui:ui:1.1.0-rc01 -> 1.1.0
+     |    |    +--- androidx.compose.runtime:runtime-saveable:1.1.0
+     |    |    |    +--- androidx.compose.runtime:runtime:1.1.0
+     |    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2
+     |    |    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+     |    |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30 -> 1.6.10 (*)
+     |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    |    +--- androidx.compose.ui:ui-geometry:1.1.0
+     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    |    |    +--- androidx.compose.ui:ui-util:1.1.0
+     |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    |    +--- androidx.compose.ui:ui-graphics:1.1.0
+     |    |    |    +--- androidx.annotation:annotation:1.2.0
+     |    |    |    +--- androidx.compose.ui:ui-unit:1.1.0
+     |    |    |    |    +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
+     |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    |    |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    |    |    |    \--- androidx.compose.ui:ui-util:1.1.0 (*)
+     |    |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    |    |    +--- androidx.compose.ui:ui-util:1.1.0 (*)
+     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    |    +--- androidx.compose.ui:ui-text:1.1.0
+     |    |    |    +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
+     |    |    |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+     |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    |    |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
+     |    |    |    +--- androidx.compose.ui:ui-util:1.1.0 (*)
+     |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    |    |    +--- androidx.collection:collection:1.1.0 (*)
+     |    |    |    \--- androidx.core:core:1.5.0 -> 1.7.0 (*)
+     |    |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+     |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+     |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    |    +--- androidx.compose.ui:ui-util:1.1.0 (*)
+     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    |    +--- androidx.autofill:autofill:1.0.0
+     |    |    |    \--- androidx.core:core:1.1.0 -> 1.7.0 (*)
+     |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2 (*)
+     |    |    +--- androidx.savedstate:savedstate:1.1.0 (*)
+     |    |    +--- androidx.lifecycle:lifecycle-common-java8:2.3.0 -> 2.4.0 (*)
+     |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.0 -> 2.4.0 (*)
+     |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 -> 2.4.0 (*)
+     |    |    \--- androidx.profileinstaller:profileinstaller:1.1.0
+     |    |         +--- androidx.annotation:annotation:1.2.0
+     |    |         \--- androidx.startup:startup-runtime:1.0.0
+     |    |              +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    |              \--- androidx.tracing:tracing:1.0.0
+     |    |                   \--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |    \--- androidx.compose.foundation:foundation:1.1.0-rc01 -> 1.1.0
+     |         +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |         +--- androidx.compose.animation:animation:1.1.0
+     |         |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |         |    +--- androidx.compose.animation:animation-core:1.1.0
+     |         |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |         |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+     |         |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |         |    |    +--- androidx.compose.ui:ui:1.0.0 -> 1.1.0 (*)
+     |         |    |    +--- androidx.compose.ui:ui-unit:1.0.0 -> 1.1.0 (*)
+     |         |    |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.0 (*)
+     |         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |         |    +--- androidx.compose.foundation:foundation-layout:1.0.0 -> 1.1.0
+     |         |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.2.0
+     |         |    |    +--- androidx.compose.ui:ui:1.1.0 (*)
+     |         |    |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+     |         |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |         |    |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.0 (*)
+     |         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |         |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |         |    +--- androidx.compose.ui:ui:1.0.0 -> 1.1.0 (*)
+     |         |    +--- androidx.compose.ui:ui-geometry:1.0.0 -> 1.1.0 (*)
+     |         |    +--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.0 (*)
+     |         |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |         +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |         +--- androidx.compose.ui:ui:1.1.0 (*)
+     |         +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |         +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
+     |         +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
+     |         +--- androidx.compose.ui:ui-text:1.0.0 -> 1.1.0 (*)
+     |         \--- androidx.compose.ui:ui-util:1.0.0 -> 1.1.0 (*)
+     +--- project :sample:core:modo:modo (*)
+     +--- project :sample:core:feature-library
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    +--- org.jetbrains:annotations:20.0.0
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10 (*)
+     |    \--- io.insert-koin:koin-core:3.1.4
+     |         \--- io.insert-koin:koin-core-jvm:3.1.4
+     +--- project :sample:features:counter:impl
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    +--- org.jetbrains:annotations:20.0.0
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10 (*)
+     |    +--- project :teamaker:core-library (*)
+     |    +--- project :teamaker:compose-android-util
+     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    |    +--- org.jetbrains:annotations:20.0.0
+     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10 (*)
+     |    |    +--- project :teamaker:core-library (*)
+     |    |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
+     |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2 (*)
+     |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+     |    +--- project :sample:core:modo:modo-render-android-compose (*)
+     |    +--- project :sample:core:modo:modo (*)
+     |    +--- project :sample:core:feature-library (*)
+     |    +--- androidx.compose.foundation:foundation:1.1.0 (*)
+     |    +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-text:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-tooling:1.1.0
+     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.0
+     |    +--- androidx.compose.ui:ui-tooling-data:1.1.0
+     |    +--- androidx.annotation:annotation:1.2.0
+     |    +--- androidx.compose.animation:animation:1.1.0 (*)
+     |    +--- androidx.compose.animation:animation-core:1.1.0 (*)
+     |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
+     |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2 (*)
+     |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+     |    +--- androidx.savedstate:savedstate:1.1.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-runtime:2.4.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-common:2.4.0 (*)
+     |    +--- androidx.arch.core:core-common:2.1.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-viewmodel:2.4.0 (*)
+     |    +--- androidx.activity:activity:1.4.0
+     |    +--- androidx.core:core:1.7.0 (*)
+     |    +--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
+     |    +--- androidx.activity:activity-compose:1.4.0
+     |    +--- androidx.compose.material:material:1.1.0
+     |    +--- androidx.compose.material:material-icons-core:1.1.0
+     |    +--- androidx.compose.material:material-ripple:1.1.0
+     |    +--- io.insert-koin:koin-android:3.1.4
+     |    +--- io.insert-koin:koin-core:3.1.4 (*)
+     |    +--- com.squareup.logcat:logcat:0.1
+     |    \--- org.jetbrains.kotlin:kotlin-parcelize-runtime:1.6.10
+     |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |         \--- org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.6.10
+     |              \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     +--- project :sample:features:learnCompose:impl
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    +--- org.jetbrains:annotations:20.0.0
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10 (*)
+     |    +--- project :teamaker:core-library (*)
+     |    +--- project :teamaker:compose-android-util (*)
+     |    +--- project :sample:core:modo:modo-render-android-compose (*)
+     |    +--- project :sample:core:modo:modo (*)
+     |    +--- project :sample:core:feature-library (*)
+     |    +--- androidx.compose.foundation:foundation:1.1.0 (*)
+     |    +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-text:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-tooling:1.1.0
+     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.0
+     |    +--- androidx.compose.ui:ui-tooling-data:1.1.0
+     |    +--- androidx.annotation:annotation:1.2.0
+     |    +--- androidx.compose.animation:animation:1.1.0 (*)
+     |    +--- androidx.compose.animation:animation-core:1.1.0 (*)
+     |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
+     |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2 (*)
+     |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+     |    +--- androidx.savedstate:savedstate:1.1.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-runtime:2.4.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-common:2.4.0 (*)
+     |    +--- androidx.arch.core:core-common:2.1.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-viewmodel:2.4.0 (*)
+     |    +--- androidx.activity:activity:1.4.0
+     |    +--- androidx.core:core:1.7.0 (*)
+     |    +--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
+     |    +--- androidx.activity:activity-compose:1.4.0
+     |    +--- androidx.compose.material:material:1.1.0
+     |    +--- androidx.compose.material:material-icons-core:1.1.0
+     |    +--- androidx.compose.material:material-ripple:1.1.0
+     |    +--- io.insert-koin:koin-android:3.1.4
+     |    +--- io.insert-koin:koin-core:3.1.4 (*)
+     |    +--- com.squareup.logcat:logcat:0.1
+     |    \--- org.jetbrains.kotlin:kotlin-parcelize-runtime:1.6.10 (*)
+     +--- project :sample:features:game:impl
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+     |    +--- org.jetbrains:annotations:20.0.0
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10 (*)
+     |    +--- project :teamaker:core-library (*)
+     |    +--- project :teamaker:compose-android-util (*)
+     |    +--- project :sample:core:modo:modo-render-android-compose (*)
+     |    +--- project :sample:core:modo:modo (*)
+     |    +--- project :sample:core:feature-library (*)
+     |    +--- androidx.compose.foundation:foundation:1.1.0 (*)
+     |    +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-text:1.1.0 (*)
+     |    +--- androidx.compose.ui:ui-tooling:1.1.0
+     |    +--- androidx.compose.ui:ui-tooling-preview:1.1.0
+     |    +--- androidx.compose.ui:ui-tooling-data:1.1.0
+     |    +--- androidx.annotation:annotation:1.2.0
+     |    +--- androidx.compose.animation:animation:1.1.0 (*)
+     |    +--- androidx.compose.animation:animation-core:1.1.0 (*)
+     |    +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     |    +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
+     |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2 (*)
+     |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+     |    +--- androidx.savedstate:savedstate:1.1.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-runtime:2.4.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-common:2.4.0 (*)
+     |    +--- androidx.arch.core:core-common:2.1.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-viewmodel:2.4.0 (*)
+     |    +--- androidx.activity:activity:1.4.0
+     |    +--- androidx.core:core:1.7.0 (*)
+     |    +--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
+     |    +--- androidx.activity:activity-compose:1.4.0
+     |    +--- androidx.compose.material:material:1.1.0
+     |    +--- androidx.compose.material:material-icons-core:1.1.0
+     |    +--- androidx.compose.material:material-ripple:1.1.0
+     |    +--- androidx.constraintlayout:constraintlayout-compose:1.0.0
+     |    +--- androidx.constraintlayout:constraintlayout-core:1.0.3
+     |    +--- com.google.accompanist:accompanist-insets:0.23.0
+     |    +--- com.google.accompanist:accompanist-systemuicontroller:0.23.0
+     |    +--- io.insert-koin:koin-android:3.1.4
+     |    +--- io.insert-koin:koin-core:3.1.4 (*)
+     |    +--- com.squareup.logcat:logcat:0.1
+     |    \--- org.jetbrains.kotlin:kotlin-parcelize-runtime:1.6.10 (*)
+     +--- androidx.appcompat:appcompat:1.2.0
+     +--- androidx.appcompat:appcompat-resources:1.2.0
+     +--- androidx.annotation:annotation:1.2.0
+     +--- androidx.core:core:1.7.0 (*)
+     +--- androidx.lifecycle:lifecycle-runtime:2.4.0 (*)
+     +--- androidx.arch.core:core-common:2.1.0 (*)
+     +--- androidx.lifecycle:lifecycle-common:2.4.0 (*)
+     +--- androidx.lifecycle:lifecycle-common-java8:2.4.0 (*)
+     +--- androidx.versionedparcelable:versionedparcelable:1.1.0 -> 1.1.1 (*)
+     +--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
+     +--- androidx.cursoradapter:cursoradapter:1.0.0
+     +--- androidx.drawerlayout:drawerlayout:1.1.0
+     +--- androidx.customview:customview:1.1.0
+     +--- androidx.fragment:fragment:1.4.0
+     +--- androidx.activity:activity:1.4.0
+     +--- androidx.lifecycle:lifecycle-viewmodel:2.4.0 (*)
+     +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.4.0
+     +--- androidx.lifecycle:lifecycle-livedata-core:2.4.0
+     +--- androidx.arch.core:core-runtime:2.1.0 (*)
+     +--- androidx.savedstate:savedstate:1.1.0 (*)
+     +--- androidx.savedstate:savedstate-ktx:1.1.0
+     +--- androidx.loader:loader:1.1.0
+     +--- androidx.viewpager:viewpager:1.0.0
+     +--- androidx.vectordrawable:vectordrawable:1.1.0
+     +--- com.google.android.material:material:1.2.0
+     +--- androidx.cardview:cardview:1.0.0
+     +--- androidx.legacy:legacy-support-core-ui:1.0.0
+     +--- androidx.asynclayoutinflater:asynclayoutinflater:1.0.0
+     +--- androidx.coordinatorlayout:coordinatorlayout:1.1.0
+     +--- androidx.interpolator:interpolator:1.0.0
+     +--- androidx.slidingpanelayout:slidingpanelayout:1.0.0
+     +--- androidx.swiperefreshlayout:swiperefreshlayout:1.0.0
+     +--- androidx.legacy:legacy-support-core-utils:1.0.0
+     +--- androidx.documentfile:documentfile:1.0.1
+     +--- androidx.localbroadcastmanager:localbroadcastmanager:1.0.0
+     +--- androidx.print:print:1.0.0
+     +--- androidx.recyclerview:recyclerview:1.1.0
+     +--- androidx.transition:transition:1.3.1
+     +--- androidx.compose.foundation:foundation:1.1.0 (*)
+     +--- androidx.compose.foundation:foundation-layout:1.1.0 (*)
+     +--- androidx.compose.ui:ui:1.1.0 (*)
+     +--- androidx.compose.ui:ui-geometry:1.1.0 (*)
+     +--- androidx.compose.ui:ui-graphics:1.1.0 (*)
+     +--- androidx.compose.ui:ui-unit:1.1.0 (*)
+     +--- androidx.compose.ui:ui-text:1.1.0 (*)
+     +--- androidx.compose.ui:ui-tooling:1.1.0
+     +--- androidx.compose.ui:ui-tooling-preview:1.1.0
+     +--- androidx.compose.ui:ui-tooling-data:1.1.0
+     +--- androidx.compose.animation:animation:1.1.0 (*)
+     +--- androidx.compose.animation:animation-core:1.1.0 (*)
+     +--- androidx.compose.runtime:runtime:1.1.0 (*)
+     +--- androidx.compose.runtime:runtime-saveable:1.1.0 (*)
+     +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2 (*)
+     +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2 (*)
+     +--- androidx.activity:activity-compose:1.4.0
+     +--- androidx.compose.material:material:1.1.0
+     +--- androidx.compose.material:material-icons-core:1.1.0
+     +--- androidx.compose.material:material-ripple:1.1.0
+     +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0
+     +--- io.insert-koin:koin-android:3.1.4
+     +--- io.insert-koin:koin-core:3.1.4 (*)
+     +--- com.squareup.logcat:logcat:0.1
+     \--- org.jetbrains.kotlin:kotlin-parcelize-runtime:1.6.10 (*)
+
+(c) - dependency constraint
+(*) - dependencies omitted (listed previously)
+
+A web-based, searchable dependency report is available by adding the --scan option.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/7.2/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 11s
+41 actionable tasks: 7 executed, 34 up-to-date
