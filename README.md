@@ -91,7 +91,25 @@ running the task so that only a single tree will be shown.
 $ ./gradlew :app:dependencies --configuration releaseRuntimeClasspath > old.txt
 $ # Update a dependency...
 $ ./gradlew :app:dependencies --configuration releaseRuntimeClasspath > new.txt
-$ ./dependency-tree-diff.jar old.txt new.txt
+```
+
+### Diff
+
+For diffing 2 dependency trees just use:
+```
+$ ./dependency-tree-diff.jar diff old.txt new.txt
+```
+
+In case you need flatten list of changed/added/removed libraries use --flatten arg:
+```
+$ ./dependency-tree-diff.jar diff --flatten old.txt new.txt
+```
+
+### Flatten dependency list
+
+This tool can also transform diff tree to flatten list.  Just use:
+```
+$ ./dependency-tree-diff.jar flatten deps.txt
 ```
 
 See `src/test/fixtures/` for example outputs and their expected diffs.
