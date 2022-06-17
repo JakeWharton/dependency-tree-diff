@@ -18,7 +18,7 @@ fun dependencyTreeDiff(old: String, new: String): String {
 }
 
 private fun findDependencyPaths(text: String): Set<List<String>> {
-	val dependencyLines = text.split('\n')
+	val dependencyLines = text.lines()
 		.dropWhile { !it.startsWith("+--- ") && !it.startsWith("\\---") }
 		.takeWhile { it.isNotEmpty() }
 
