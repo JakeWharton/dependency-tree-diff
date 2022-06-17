@@ -7,8 +7,22 @@ import java.util.regex.Pattern
 
 @JvmName("diff")
 fun dependencyTreeDiff(old: String, new: String): String {
-	val oldPaths = findDependencyPaths(old)
-	val newPaths = findDependencyPaths(new)
+	val oldLines = dependencies(old)
+	val newLines = dependencies(new)
+	return dependencyTreeDiff(oldLines, newLines)
+}
+
+private val newlineRegex = Pattern.compile("(\\r\\n|\\n|\\r)")
+
+private fun dependencies(text: String): List<String> =
+	newlineRegex
+		.split(text)
+		.dropWhile { !it.startsWith("+--- ") && !it.startsWith("\\---") }
+		.takeWhile { it.isNotEmpty() }
+
+private fun dependencyTreeDiff(oldLines: List<String>, newLines: List<String>): String {
+	val oldPaths = findDependencyPaths(oldLines)
+	val newPaths = findDependencyPaths(newLines)
 
 	val removedTree = buildTree(oldPaths - newPaths)
 	val addedTree = buildTree(newPaths - oldPaths)
@@ -18,13 +32,7 @@ fun dependencyTreeDiff(old: String, new: String): String {
 	}
 }
 
-private val newlineRegex = Pattern.compile("(\\r\\n|\\n|\\r)")
-
-private fun findDependencyPaths(text: String): Set<List<String>> {
-	val dependencyLines = newlineRegex.split(text)
-		.dropWhile { !it.startsWith("+--- ") && !it.startsWith("\\---") }
-		.takeWhile { it.isNotEmpty() }
-
+private fun findDependencyPaths(dependencyLines: List<String>): Set<List<String>> {
 	val dependencyPaths = mutableSetOf<List<String>>()
 	val stack = ArrayDeque<String>()
 	for (dependencyLine in dependencyLines) {
