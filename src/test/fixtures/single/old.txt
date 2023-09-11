@@ -1,0 +1,94 @@
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :buildSrc:compileKotlin UP-TO-DATE
+> Task :buildSrc:compileJava NO-SOURCE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:processResources UP-TO-DATE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:inspectClassesForKotlinIC UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+> Task :buildSrc:assemble UP-TO-DATE
+> Task :buildSrc:detekt UP-TO-DATE
+> Task :buildSrc:compileTestKotlin NO-SOURCE
+> Task :buildSrc:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:compileTestJava NO-SOURCE
+> Task :buildSrc:compileTestGroovy NO-SOURCE
+> Task :buildSrc:processTestResources NO-SOURCE
+> Task :buildSrc:testClasses UP-TO-DATE
+> Task :buildSrc:test NO-SOURCE
+> Task :buildSrc:validatePlugins UP-TO-DATE
+> Task :buildSrc:check UP-TO-DATE
+> Task :buildSrc:build UP-TO-DATE
+
+> Task :backend:endpoint:dependencies
+
+------------------------------------------------------------
+Project ':backend:endpoint'
+------------------------------------------------------------
+
+detekt - The detekt dependencies to be used for this project.
+\--- io.gitlab.arturbosch.detekt:detekt-cli:1.20.0
+     +--- com.beust:jcommander:1.82
+     +--- io.gitlab.arturbosch.detekt:detekt-tooling:1.20.0
+     |    \--- io.gitlab.arturbosch.detekt:detekt-api:1.20.0
+     |         +--- io.gitlab.arturbosch.detekt:detekt-utils:1.20.0
+     |         +--- org.jetbrains.kotlin:kotlin-compiler-embeddable:1.6.20
+     |         |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20
+     |         |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20
+     |         |    |    \--- org.jetbrains:annotations:13.0
+     |         |    +--- org.jetbrains.kotlin:kotlin-script-runtime:1.6.20
+     |         |    +--- org.jetbrains.kotlin:kotlin-reflect:1.6.20
+     |         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 (*)
+     |         |    +--- org.jetbrains.kotlin:kotlin-daemon-embeddable:1.6.20
+     |         |    +--- org.jetbrains.intellij.deps:trove4j:1.0.20200330
+     |         |    \--- net.java.dev.jna:jna:5.6.0
+     |         \--- io.gitlab.arturbosch.detekt:detekt-psi-utils:1.20.0
+     |              \--- org.jetbrains.kotlin:kotlin-compiler-embeddable:1.6.20 (*)
+     +--- io.gitlab.arturbosch.detekt:detekt-parser:1.20.0
+     |    +--- io.gitlab.arturbosch.detekt:detekt-psi-utils:1.20.0 (*)
+     |    \--- org.jetbrains.kotlin:kotlin-compiler-embeddable:1.6.20 (*)
+     +--- io.gitlab.arturbosch.detekt:detekt-core:1.20.0
+     |    +--- org.yaml:snakeyaml:1.30
+     |    +--- io.gitlab.arturbosch.detekt:detekt-api:1.20.0 (*)
+     |    +--- io.gitlab.arturbosch.detekt:detekt-metrics:1.20.0
+     |    |    \--- io.gitlab.arturbosch.detekt:detekt-api:1.20.0 (*)
+     |    +--- io.gitlab.arturbosch.detekt:detekt-parser:1.20.0 (*)
+     |    +--- io.gitlab.arturbosch.detekt:detekt-psi-utils:1.20.0 (*)
+     |    +--- io.gitlab.arturbosch.detekt:detekt-tooling:1.20.0 (*)
+     |    +--- io.gitlab.arturbosch.detekt:detekt-report-html:1.20.0
+     |    |    +--- io.gitlab.arturbosch.detekt:detekt-utils:1.20.0
+     |    |    \--- org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.5
+     |    +--- io.gitlab.arturbosch.detekt:detekt-report-txt:1.20.0
+     |    |    \--- io.gitlab.arturbosch.detekt:detekt-api:1.20.0 (*)
+     |    +--- io.gitlab.arturbosch.detekt:detekt-report-xml:1.20.0
+     |    |    \--- io.gitlab.arturbosch.detekt:detekt-api:1.20.0 (*)
+     |    +--- io.gitlab.arturbosch.detekt:detekt-report-sarif:1.20.0
+     |    |    \--- io.github.detekt.sarif4k:sarif4k:0.0.1
+     |    |         +--- org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0
+     |    |         |    \--- org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.1.0
+     |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.30 -> 1.6.20 (*)
+     |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.30 -> 1.6.20
+     |    |         |         \--- org.jetbrains.kotlinx:kotlinx-serialization-core:1.1.0
+     |    |         |              \--- org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.1.0
+     |    |         |                   +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.30 -> 1.6.20 (*)
+     |    |         |                   \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.30 -> 1.6.20
+     |    |         \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.31 -> 1.6.20 (*)
+     |    \--- io.gitlab.arturbosch.detekt:detekt-utils:1.20.0
+     \--- io.gitlab.arturbosch.detekt:detekt-rules:1.20.0
+          +--- io.gitlab.arturbosch.detekt:detekt-rules-complexity:1.20.0
+          +--- io.gitlab.arturbosch.detekt:detekt-rules-coroutines:1.20.0
+          +--- io.gitlab.arturbosch.detekt:detekt-rules-documentation:1.20.0
+          +--- io.gitlab.arturbosch.detekt:detekt-rules-empty:1.20.0
+          +--- io.gitlab.arturbosch.detekt:detekt-rules-errorprone:1.20.0
+          |    \--- io.gitlab.arturbosch.detekt:detekt-tooling:1.20.0 (*)
+          +--- io.gitlab.arturbosch.detekt:detekt-rules-exceptions:1.20.0
+          +--- io.gitlab.arturbosch.detekt:detekt-rules-naming:1.20.0
+          +--- io.gitlab.arturbosch.detekt:detekt-rules-performance:1.20.0
+          \--- io.gitlab.arturbosch.detekt:detekt-rules-style:1.20.0
+
+(*) - dependencies omitted (listed previously)
+
+A web-based, searchable dependency report is available by adding the --scan option.
+
+BUILD SUCCESSFUL in 11s
+9 actionable tasks: 1 executed, 8 up-to-date

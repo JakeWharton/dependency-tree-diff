@@ -64,8 +64,8 @@ private fun formatLibraries(keys: Set<String>, dependencies: Map<String, String>
 private fun Map.Entry<String, String>.formatLibrary() = "$key:$value"
 
 private fun findDependencyPaths(text: String): Set<List<String>> {
-	val dependencyLines = text.split('\n')
-		.dropWhile { !it.startsWith("+--- ") && !it.startsWith("\\--- ") }
+	val dependencyLines = text.lines()
+		.dropWhile { !it.startsWith("+--- ") && !it.startsWith("\\---") }
 		.takeWhile { it.isNotEmpty() }
 
 	val dependencyPaths = mutableSetOf<List<String>>()
