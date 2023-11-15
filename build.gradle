@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-	id("org.jetbrains.kotlin.jvm") version("1.9.20")
+	alias(libs.plugins.kotlin.jvm)
 }
 
 kotlin {
@@ -24,13 +24,14 @@ configurations {
 }
 
 dependencies {
-	testImplementation 'junit:junit:4.13.2'
-	testImplementation 'com.google.truth:truth:1.1.3'
+	testImplementation(platform(libs.junit.bom))
+	testImplementation libs.junit
+	testImplementation libs.truth
 
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-	testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.10.1")
+	testRuntimeOnly(libs.junit.platform.launcher)
+	testRuntimeOnly(libs.junit.vintage.engine)
 
-	r8 'com.android.tools:r8:8.1.56'
+	r8 libs.r8
 }
 
 def fatJarProvider = tasks.register('fatJar', Jar) { task ->

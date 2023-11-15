@@ -1,0 +1,12 @@
+[versions]
+
+[libraries]
+junit-bom = "org.junit:junit-bom:5.10.1"
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+junit = "junit:junit:4.13.2"
+junit-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine" }
+truth = "com.google.truth:truth:1.1.5"
+r8 = "com.android.tools:r8:8.1.56"
+
+[plugins]
+kotlin-jvm = "org.jetbrains.kotlin.jvm:1.9.20"
