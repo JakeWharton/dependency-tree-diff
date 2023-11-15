@@ -1,9 +1,22 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
 	id("org.jetbrains.kotlin.jvm") version("1.9.20")
 }
 
 kotlin {
 	jvmToolchain(21)
+}
+
+tasks.withType(KotlinCompile).configureEach {
+	compilerOptions {
+		jvmTarget = JvmTarget.JVM_11
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.release.set(11)
 }
 
 configurations {
@@ -21,7 +34,7 @@ def fatJarProvider = tasks.register('fatJar', Jar) { task ->
 	task.dependsOn(configurations.named('runtimeClasspath'))
 	task.dependsOn(tasks.named('jar'))
 
-	task.classifier 'fat'
+	task.archiveClassifier.set('fat')
 
 	task.manifest {
 		attributes 'Main-Class': 'com.jakewharton.gradle.dependencies.DependencyTreeDiff'
