@@ -58,7 +58,7 @@ def fatJarProvider = tasks.register('fatJar', Jar) { task ->
 }
 
 def r8File = layout.buildDirectory.file("libs/${base.archivesName.get()}-r8.jar").get().asFile
-def rulesFile = project.file("src/main/rules.txt")
+def rulesFile = project.file("src/main/rules.pro")
 
 def r8Jar = tasks.register('r8Jar', JavaExec) { task ->
 	task.javaLauncher.set(javaToolchains.launcherFor { spec ->
