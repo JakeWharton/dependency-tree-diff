@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
 	alias(libs.plugins.kotlin.jvm)
+	alias(libs.plugins.spotless)
 }
 
 kotlin {
@@ -17,6 +18,15 @@ tasks.withType(KotlinCompile).configureEach {
 
 tasks.withType(JavaCompile).configureEach {
 	options.release.set(11)
+}
+
+spotless {
+	kotlin {
+		ktlint().editorConfigOverride([
+			'ktlint_standard_filename': 'disabled',
+		])
+		target('**/*.kt')
+	}
 }
 
 configurations {

@@ -10,3 +10,4 @@ r8 = "com.android.tools:r8:8.1.56"
 
 [plugins]
 kotlin-jvm = "org.jetbrains.kotlin.jvm:1.9.20"
+spotless = "com.diffplug.spotless:6.22.0"

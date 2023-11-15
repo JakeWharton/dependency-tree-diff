@@ -1,11 +1,11 @@
 package com.jakewharton.gradle.dependencies
 
 import com.google.common.truth.Truth.assertThat
+import java.io.File
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import org.junit.runners.Parameterized.Parameters
-import java.io.File
 
 @RunWith(Parameterized::class)
 class FixtureTest(private val fixtureDir: File) {
