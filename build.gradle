@@ -27,7 +27,7 @@ dependencies {
 	testImplementation 'junit:junit:4.13.2'
 	testImplementation 'com.google.truth:truth:1.1.3'
 
-	r8 'com.android.tools:r8:2.0.99'
+	r8 'com.android.tools:r8:8.1.56'
 }
 
 def fatJarProvider = tasks.register('fatJar', Jar) { task ->
@@ -42,40 +42,43 @@ def fatJarProvider = tasks.register('fatJar', Jar) { task ->
 
 	def sourceClasses = sourceSets.main.output.classesDirs
 	task.inputs.files(sourceClasses)
-
-	task.doFirst {
-		task.from files(sourceClasses)
-		task.from configurations.runtimeClasspath.asFileTree.files.collect { zipTree(it) }
-		task.exclude '**/*.kotlin_metadata'
-		task.exclude '**/*.kotlin_module'
-		task.exclude '**/*.kotlin_builtins'
-		task.exclude '**/module-info.class'
-		task.exclude 'META-INF/maven/**'
+	task.from files(sourceClasses)
+	task.from configurations.named('runtimeClasspath').map {
+		it.asFileTree.files.collect { it.isDirectory() ? it : zipTree(it) }
 	}
+
+	task.exclude '**/*.kotlin_metadata'
+	task.exclude '**/*.kotlin_module'
+	task.exclude '**/*.kotlin_builtins'
+	task.exclude '**/module-info.class'
+	task.exclude 'META-INF/maven/**'
 }
 
-def r8File = new File("$buildDir/libs/$archivesBaseName-r8.jar")
+def r8File = layout.buildDirectory.file("libs/$archivesBaseName-r8.jar").get().asFile
+def rulesFile = project.file("src/main/rules.txt")
+
 def r8Jar = tasks.register('r8Jar', JavaExec) { task ->
-	def rules = file('src/main/rules.txt')
-	task.dependsOn(configurations.named('runtimeClasspath'))
-	task.inputs.files(fatJarProvider.get().outputs.files, rules)
+	task.javaLauncher.set(javaToolchains.launcherFor { spec ->
+		spec.languageVersion.set(JavaLanguageVersion.of(17))
+	})
+	def fatJarFile = fatJarProvider.get().archiveFile
+	task.inputs.file(fatJarFile)
+	task.inputs.file(rulesFile)
 	task.outputs.file(r8File)
 
 	task.classpath(configurations.r8)
-	task.main = 'com.android.tools.r8.R8'
+	task.mainClass.set('com.android.tools.r8.R8')
 	task.args = [
 		'--release',
 		'--classfile',
-		'--output', r8File.toString(),
-		'--pg-conf', rules.toString(),
-		'--lib', System.properties['java.home'].toString()
+		'--output', r8File.path,
+		'--pg-conf', rulesFile.path,
+		'--lib', System.properties['java.home'].toString(),
+		fatJarFile.get().asFile.path
 	]
-	doFirst {
-		task.args += fatJarProvider.get().archivePath
-	}
 }
 
-def binaryFile = new File("$buildDir/${archivesBaseName}.jar")
+def binaryFile = layout.buildDirectory.file("libs/${archivesBaseName}.jar").get().asFile
 def binaryJar = tasks.register('binaryJar') { task ->
 	task.dependsOn(r8Jar)
 
