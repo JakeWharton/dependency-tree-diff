@@ -41,7 +41,7 @@ def fatJarProvider = tasks.register('fatJar', Jar) { task ->
 	task.exclude 'META-INF/maven/**'
 }
 
-def r8File = layout.buildDirectory.file("libs/$archivesBaseName-r8.jar").get().asFile
+def r8File = layout.buildDirectory.file("libs/${base.archivesName.get()}-r8.jar").get().asFile
 def rulesFile = project.file("src/main/rules.txt")
 
 def r8Jar = tasks.register('r8Jar', JavaExec) { task ->
@@ -62,7 +62,7 @@ def r8Jar = tasks.register('r8Jar', JavaExec) { task ->
 	]
 }
 
-def binaryFile = layout.buildDirectory.file("libs/${archivesBaseName}.jar").get().asFile
+def binaryFile = layout.buildDirectory.file("${base.archivesName.get()}.jar").get().asFile
 def binaryJar = tasks.register('binaryJar') { task ->
 	task.dependsOn(r8Jar)
 
