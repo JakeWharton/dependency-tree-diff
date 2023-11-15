@@ -99,6 +99,22 @@ tasks.named('assemble').configure { task ->
 	task.dependsOn(binaryJar)
 }
 
+[11, 17].forEach { majorVersion ->
+	def jdkTest = tasks.register("testJdk$majorVersion", Test) {
+		javaLauncher = javaToolchains.launcherFor {
+			languageVersion = JavaLanguageVersion.of(majorVersion)
+		}
+
+		description = "Runs the test suite on JDK $majorVersion"
+		group = LifecycleBasePlugin.VERIFICATION_GROUP
+
+		def testTask = tasks.named("test").get()
+		classpath = testTask.classpath
+		testClassesDirs = testTask.testClassesDirs
+	}
+	tasks.named("check").configure { dependsOn(jdkTest) }
+}
+
 artifacts {
 	archives file: binaryFile, name: 'binary', type: 'jar', builtBy: binaryJar, classifier: 'binary'
 }
