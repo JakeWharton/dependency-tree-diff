@@ -1,5 +1,5 @@
 [libraries]
 junit = "junit:junit:4.13.2"
 truth = "com.google.truth:truth:1.1.5"
-r8 = "com.android.tools:r8:2.0.99"
+r8 = "com.android.tools:r8:2.2.64"
 kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.21"
