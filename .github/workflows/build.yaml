@@ -22,7 +22,7 @@ jobs:
       - uses: gradle/wrapper-validation-action@v1
       - run: ./gradlew build
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: dependency-tree-diff.jar
           path: build/dependency-tree-diff.jar
