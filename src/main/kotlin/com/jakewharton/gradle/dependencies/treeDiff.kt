@@ -51,7 +51,7 @@ private fun findDependencyPaths(text: String): Set<List<String>> {
 	return dependencyPaths
 }
 
-private data class Node(
+private class Node(
 	val coordinate: String,
 	val versionInfo: String,
 	val children: MutableList<Node>,
