@@ -1,0 +1,457 @@
+compileClasspath - Compile classpath for compilation 'main' (target  (jvm)).
+-+--- com.google.dagger:dagger:2.37
+++--- com.google.dagger:dagger:2.42
+-\--- com.google.dagger:dagger:{strictly 2.37} -> 2.37 (c)
++\--- com.google.dagger:dagger:{strictly 2.42} -> 2.42 (c)
+
+implementation - Implementation only dependencies for compilation 'main' (target  (jvm)). (n)
+-\--- com.google.dagger:dagger:2.37 (n)
++\--- com.google.dagger:dagger:2.42 (n)
+
+implementationDependenciesMetadata
+-\--- com.google.dagger:dagger:2.37
++\--- com.google.dagger:dagger:2.42
+
+kapt
+-+--- com.google.dagger:dagger-compiler:2.37
+-|    +--- com.google.dagger:dagger:2.37
+-|    |    \--- javax.inject:javax.inject:1
+-|    +--- com.google.dagger:dagger-producers:2.37
+-|    |    +--- com.google.dagger:dagger:2.37 (*)
+-|    |    +--- com.google.guava:failureaccess:1.0.1
+-|    |    +--- com.google.guava:guava:27.1-jre
+-|    |    |    +--- com.google.guava:failureaccess:1.0.1
+-|    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+-|    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+-|    |    |    +--- org.checkerframework:checker-qual:2.5.2
+-|    |    |    +--- com.google.errorprone:error_prone_annotations:2.2.0
+-|    |    |    +--- com.google.j2objc:j2objc-annotations:1.1
+-|    |    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.17
+-|    |    +--- javax.inject:javax.inject:1
+-|    |    \--- org.checkerframework:checker-compat-qual:2.5.3
+-|    +--- com.google.dagger:dagger-spi:2.37
+-|    |    +--- com.google.dagger:dagger:2.37 (*)
+-|    |    +--- com.google.dagger:dagger-producers:2.37 (*)
+-|    |    +--- com.google.code.findbugs:jsr305:3.0.1 -> 3.0.2
+-|    |    +--- com.google.guava:failureaccess:1.0.1
+-|    |    +--- com.google.guava:guava:27.1-jre (*)
+-|    |    +--- com.squareup:javapoet:1.13.0
+-|    |    \--- javax.inject:javax.inject:1
+-|    +--- com.google.code.findbugs:jsr305:3.0.1 -> 3.0.2
+-|    +--- com.google.googlejavaformat:google-java-format:1.5
+-|    |    +--- com.google.guava:guava:22.0 -> 27.1-jre (*)
+-|    |    \--- com.google.errorprone:javac-shaded:9-dev-r4023-3
+-|    +--- com.google.guava:failureaccess:1.0.1
+-|    +--- com.google.guava:guava:27.1-jre (*)
+-|    +--- com.squareup:javapoet:1.13.0
+-|    +--- javax.annotation:jsr250-api:1.0
+-|    +--- javax.inject:javax.inject:1
+-|    +--- net.ltgt.gradle.incap:incap:0.2
+-|    +--- org.checkerframework:checker-compat-qual:2.5.3
+-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
+-|    |    +--- org.jetbrains:annotations:13.0
+-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
+-|    \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0
+-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+++--- com.google.dagger:dagger-compiler:2.42
++|    +--- com.google.dagger:dagger:2.42
++|    |    \--- javax.inject:javax.inject:1
++|    +--- com.google.dagger:dagger-producers:2.42
++|    |    +--- com.google.dagger:dagger:2.42 (*)
++|    |    +--- com.google.guava:failureaccess:1.0.1
++|    |    +--- com.google.guava:guava:31.0.1-jre
++|    |    |    +--- com.google.guava:failureaccess:1.0.1
++|    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
++|    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
++|    |    |    +--- org.checkerframework:checker-qual:3.12.0
++|    |    |    +--- com.google.errorprone:error_prone_annotations:2.7.1
++|    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
++|    |    +--- javax.inject:javax.inject:1
++|    |    \--- org.checkerframework:checker-compat-qual:2.5.5
++|    +--- com.google.dagger:dagger-spi:2.42
++|    |    +--- com.google.dagger:dagger:2.42 (*)
++|    |    +--- com.google.dagger:dagger-producers:2.42 (*)
++|    |    +--- com.google.code.findbugs:jsr305:3.0.2
++|    |    +--- com.google.devtools.ksp:symbol-processing-api:1.5.30-1.0.0
++|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30 -> 1.5.32
++|    |    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.32 -> 1.6.10
++|    |    |         |    +--- org.jetbrains:annotations:13.0
++|    |    |         |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.32
++|    |    |              \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.32 -> 1.6.10 (*)
++|    |    +--- com.google.guava:failureaccess:1.0.1
++|    |    +--- com.google.guava:guava:31.0.1-jre (*)
++|    |    +--- com.squareup:javapoet:1.13.0
++|    |    +--- javax.inject:javax.inject:1
++|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.32 (*)
++|    +--- com.google.code.findbugs:jsr305:3.0.2
++|    +--- com.google.googlejavaformat:google-java-format:1.5
++|    |    +--- com.google.guava:guava:22.0 -> 31.0.1-jre (*)
++|    |    \--- com.google.errorprone:javac-shaded:9-dev-r4023-3
++|    +--- com.google.guava:failureaccess:1.0.1
++|    +--- com.google.guava:guava:31.0.1-jre (*)
++|    +--- com.squareup:javapoet:1.13.0
++|    +--- javax.inject:javax.inject:1
++|    +--- net.ltgt.gradle.incap:incap:0.2
++|    +--- org.checkerframework:checker-compat-qual:2.5.5
++|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++|    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.32 (*)
++|    \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2
++|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-+--- com.google.dagger:dagger-compiler:{strictly 2.37} -> 2.37 (c)
+++--- com.google.dagger:dagger-compiler:{strictly 2.42} -> 2.42 (c)
+-+--- com.google.dagger:dagger:{strictly 2.37} -> 2.37 (c)
+++--- com.google.dagger:dagger:{strictly 2.42} -> 2.42 (c)
+-+--- com.google.dagger:dagger-producers:{strictly 2.37} -> 2.37 (c)
+++--- com.google.dagger:dagger-producers:{strictly 2.42} -> 2.42 (c)
+-+--- com.google.dagger:dagger-spi:{strictly 2.37} -> 2.37 (c)
+++--- com.google.dagger:dagger-spi:{strictly 2.42} -> 2.42 (c)
+-+--- com.google.guava:guava:{strictly 27.1-jre} -> 27.1-jre (c)
+++--- com.google.guava:guava:{strictly 31.0.1-jre} -> 31.0.1-jre (c)
+-+--- javax.annotation:jsr250-api:{strictly 1.0} -> 1.0 (c)
+-+--- org.checkerframework:checker-compat-qual:{strictly 2.5.3} -> 2.5.3 (c)
+++--- org.checkerframework:checker-compat-qual:{strictly 2.5.5} -> 2.5.5 (c)
+-+--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.5.0} -> 1.5.0 (c)
+++--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.6.10} -> 1.6.10 (c)
+++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.5.32} -> 1.5.32 (c)
+-+--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:{strictly 0.3.0} -> 0.3.0 (c)
+++--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:{strictly 0.4.2} -> 0.4.2 (c)
+++--- com.google.devtools.ksp:symbol-processing-api:{strictly 1.5.30-1.0.0} -> 1.5.30-1.0.0 (c)
+-+--- org.checkerframework:checker-qual:{strictly 2.5.2} -> 2.5.2 (c)
+++--- org.checkerframework:checker-qual:{strictly 3.12.0} -> 3.12.0 (c)
+-+--- com.google.errorprone:error_prone_annotations:{strictly 2.2.0} -> 2.2.0 (c)
+++--- com.google.errorprone:error_prone_annotations:{strictly 2.7.1} -> 2.7.1 (c)
+-+--- com.google.j2objc:j2objc-annotations:{strictly 1.1} -> 1.1 (c)
+++--- com.google.j2objc:j2objc-annotations:{strictly 1.3} -> 1.3 (c)
+-+--- org.codehaus.mojo:animal-sniffer-annotations:{strictly 1.17} -> 1.17 (c)
+-\--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.5.0} -> 1.5.0 (c)
+++--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.6.10} -> 1.6.10 (c)
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.5.32} -> 1.5.32 (c)
+
+kaptClasspath_kaptKotlin
+-\--- com.google.dagger:dagger-compiler:2.37
+-     +--- com.google.dagger:dagger:2.37
+-     |    \--- javax.inject:javax.inject:1
+-     +--- com.google.dagger:dagger-producers:2.37
+-     |    +--- com.google.dagger:dagger:2.37 (*)
+-     |    +--- com.google.guava:failureaccess:1.0.1
+-     |    +--- com.google.guava:guava:27.1-jre
+-     |    |    +--- com.google.guava:failureaccess:1.0.1
+-     |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+-     |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+-     |    |    +--- org.checkerframework:checker-qual:2.5.2
+-     |    |    +--- com.google.errorprone:error_prone_annotations:2.2.0
+-     |    |    +--- com.google.j2objc:j2objc-annotations:1.1
+-     |    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.17
+-     |    +--- javax.inject:javax.inject:1
+-     |    \--- org.checkerframework:checker-compat-qual:2.5.3
+-     +--- com.google.dagger:dagger-spi:2.37
+-     |    +--- com.google.dagger:dagger:2.37 (*)
+-     |    +--- com.google.dagger:dagger-producers:2.37 (*)
+-     |    +--- com.google.code.findbugs:jsr305:3.0.1 -> 3.0.2
+-     |    +--- com.google.guava:failureaccess:1.0.1
+-     |    +--- com.google.guava:guava:27.1-jre (*)
+-     |    +--- com.squareup:javapoet:1.13.0
+-     |    \--- javax.inject:javax.inject:1
+-     +--- com.google.code.findbugs:jsr305:3.0.1 -> 3.0.2
+-     +--- com.google.googlejavaformat:google-java-format:1.5
+-     |    +--- com.google.guava:guava:22.0 -> 27.1-jre (*)
+-     |    \--- com.google.errorprone:javac-shaded:9-dev-r4023-3
+-     +--- com.google.guava:failureaccess:1.0.1
+-     +--- com.google.guava:guava:27.1-jre (*)
+-     +--- com.squareup:javapoet:1.13.0
+-     +--- javax.annotation:jsr250-api:1.0
+-     +--- javax.inject:javax.inject:1
+-     +--- net.ltgt.gradle.incap:incap:0.2
+-     +--- org.checkerframework:checker-compat-qual:2.5.3
+-     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
+-     |    +--- org.jetbrains:annotations:13.0
+-     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
+-     \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0
+-          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++\--- com.google.dagger:dagger-compiler:2.42
++     +--- com.google.dagger:dagger:2.42
++     |    \--- javax.inject:javax.inject:1
++     +--- com.google.dagger:dagger-producers:2.42
++     |    +--- com.google.dagger:dagger:2.42 (*)
++     |    +--- com.google.guava:failureaccess:1.0.1
++     |    +--- com.google.guava:guava:31.0.1-jre
++     |    |    +--- com.google.guava:failureaccess:1.0.1
++     |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
++     |    |    +--- com.google.code.findbugs:jsr305:3.0.2
++     |    |    +--- org.checkerframework:checker-qual:3.12.0
++     |    |    +--- com.google.errorprone:error_prone_annotations:2.7.1
++     |    |    \--- com.google.j2objc:j2objc-annotations:1.3
++     |    +--- javax.inject:javax.inject:1
++     |    \--- org.checkerframework:checker-compat-qual:2.5.5
++     +--- com.google.dagger:dagger-spi:2.42
++     |    +--- com.google.dagger:dagger:2.42 (*)
++     |    +--- com.google.dagger:dagger-producers:2.42 (*)
++     |    +--- com.google.code.findbugs:jsr305:3.0.2
++     |    +--- com.google.devtools.ksp:symbol-processing-api:1.5.30-1.0.0
++     |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30 -> 1.5.32
++     |    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.32 -> 1.6.10
++     |    |         |    +--- org.jetbrains:annotations:13.0
++     |    |         |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++     |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.32
++     |    |              \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.32 -> 1.6.10 (*)
++     |    +--- com.google.guava:failureaccess:1.0.1
++     |    +--- com.google.guava:guava:31.0.1-jre (*)
++     |    +--- com.squareup:javapoet:1.13.0
++     |    +--- javax.inject:javax.inject:1
++     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.32 (*)
++     +--- com.google.code.findbugs:jsr305:3.0.2
++     +--- com.google.googlejavaformat:google-java-format:1.5
++     |    +--- com.google.guava:guava:22.0 -> 31.0.1-jre (*)
++     |    \--- com.google.errorprone:javac-shaded:9-dev-r4023-3
++     +--- com.google.guava:failureaccess:1.0.1
++     +--- com.google.guava:guava:31.0.1-jre (*)
++     +--- com.squareup:javapoet:1.13.0
++     +--- javax.inject:javax.inject:1
++     +--- net.ltgt.gradle.incap:incap:0.2
++     +--- org.checkerframework:checker-compat-qual:2.5.5
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.32 (*)
++     \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+
+kaptClasspath_kaptTestKotlin
+-\--- com.google.dagger:dagger-compiler:2.37
+-     +--- com.google.dagger:dagger:2.37
+-     |    \--- javax.inject:javax.inject:1
+-     +--- com.google.dagger:dagger-producers:2.37
+-     |    +--- com.google.dagger:dagger:2.37 (*)
+-     |    +--- com.google.guava:failureaccess:1.0.1
+-     |    +--- com.google.guava:guava:27.1-jre
+-     |    |    +--- com.google.guava:failureaccess:1.0.1
+-     |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+-     |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+-     |    |    +--- org.checkerframework:checker-qual:2.5.2
+-     |    |    +--- com.google.errorprone:error_prone_annotations:2.2.0
+-     |    |    +--- com.google.j2objc:j2objc-annotations:1.1
+-     |    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.17
+-     |    +--- javax.inject:javax.inject:1
+-     |    \--- org.checkerframework:checker-compat-qual:2.5.3
+-     +--- com.google.dagger:dagger-spi:2.37
+-     |    +--- com.google.dagger:dagger:2.37 (*)
+-     |    +--- com.google.dagger:dagger-producers:2.37 (*)
+-     |    +--- com.google.code.findbugs:jsr305:3.0.1 -> 3.0.2
+-     |    +--- com.google.guava:failureaccess:1.0.1
+-     |    +--- com.google.guava:guava:27.1-jre (*)
+-     |    +--- com.squareup:javapoet:1.13.0
+-     |    \--- javax.inject:javax.inject:1
+-     +--- com.google.code.findbugs:jsr305:3.0.1 -> 3.0.2
+-     +--- com.google.googlejavaformat:google-java-format:1.5
+-     |    +--- com.google.guava:guava:22.0 -> 27.1-jre (*)
+-     |    \--- com.google.errorprone:javac-shaded:9-dev-r4023-3
+-     +--- com.google.guava:failureaccess:1.0.1
+-     +--- com.google.guava:guava:27.1-jre (*)
+-     +--- com.squareup:javapoet:1.13.0
+-     +--- javax.annotation:jsr250-api:1.0
+-     +--- javax.inject:javax.inject:1
+-     +--- net.ltgt.gradle.incap:incap:0.2
+-     +--- org.checkerframework:checker-compat-qual:2.5.3
+-     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
+-     |    +--- org.jetbrains:annotations:13.0
+-     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
+-     \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0
+-          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++\--- com.google.dagger:dagger-compiler:2.42
++     +--- com.google.dagger:dagger:2.42
++     |    \--- javax.inject:javax.inject:1
++     +--- com.google.dagger:dagger-producers:2.42
++     |    +--- com.google.dagger:dagger:2.42 (*)
++     |    +--- com.google.guava:failureaccess:1.0.1
++     |    +--- com.google.guava:guava:31.0.1-jre
++     |    |    +--- com.google.guava:failureaccess:1.0.1
++     |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
++     |    |    +--- com.google.code.findbugs:jsr305:3.0.2
++     |    |    +--- org.checkerframework:checker-qual:3.12.0
++     |    |    +--- com.google.errorprone:error_prone_annotations:2.7.1
++     |    |    \--- com.google.j2objc:j2objc-annotations:1.3
++     |    +--- javax.inject:javax.inject:1
++     |    \--- org.checkerframework:checker-compat-qual:2.5.5
++     +--- com.google.dagger:dagger-spi:2.42
++     |    +--- com.google.dagger:dagger:2.42 (*)
++     |    +--- com.google.dagger:dagger-producers:2.42 (*)
++     |    +--- com.google.code.findbugs:jsr305:3.0.2
++     |    +--- com.google.devtools.ksp:symbol-processing-api:1.5.30-1.0.0
++     |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30 -> 1.5.32
++     |    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.32 -> 1.6.10
++     |    |         |    +--- org.jetbrains:annotations:13.0
++     |    |         |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++     |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.32
++     |    |              \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.32 -> 1.6.10 (*)
++     |    +--- com.google.guava:failureaccess:1.0.1
++     |    +--- com.google.guava:guava:31.0.1-jre (*)
++     |    +--- com.squareup:javapoet:1.13.0
++     |    +--- javax.inject:javax.inject:1
++     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.32 (*)
++     +--- com.google.code.findbugs:jsr305:3.0.2
++     +--- com.google.googlejavaformat:google-java-format:1.5
++     |    +--- com.google.guava:guava:22.0 -> 31.0.1-jre (*)
++     |    \--- com.google.errorprone:javac-shaded:9-dev-r4023-3
++     +--- com.google.guava:failureaccess:1.0.1
++     +--- com.google.guava:guava:31.0.1-jre (*)
++     +--- com.squareup:javapoet:1.13.0
++     +--- javax.inject:javax.inject:1
++     +--- net.ltgt.gradle.incap:incap:0.2
++     +--- org.checkerframework:checker-compat-qual:2.5.5
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++     +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.32 (*)
++     \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+
+kaptTest
+-+--- com.google.dagger:dagger-compiler:2.37
+-|    +--- com.google.dagger:dagger:2.37
+-|    |    \--- javax.inject:javax.inject:1
+-|    +--- com.google.dagger:dagger-producers:2.37
+-|    |    +--- com.google.dagger:dagger:2.37 (*)
+-|    |    +--- com.google.guava:failureaccess:1.0.1
+-|    |    +--- com.google.guava:guava:27.1-jre
+-|    |    |    +--- com.google.guava:failureaccess:1.0.1
+-|    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+-|    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+-|    |    |    +--- org.checkerframework:checker-qual:2.5.2
+-|    |    |    +--- com.google.errorprone:error_prone_annotations:2.2.0
+-|    |    |    +--- com.google.j2objc:j2objc-annotations:1.1
+-|    |    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.17
+-|    |    +--- javax.inject:javax.inject:1
+-|    |    \--- org.checkerframework:checker-compat-qual:2.5.3
+-|    +--- com.google.dagger:dagger-spi:2.37
+-|    |    +--- com.google.dagger:dagger:2.37 (*)
+-|    |    +--- com.google.dagger:dagger-producers:2.37 (*)
+-|    |    +--- com.google.code.findbugs:jsr305:3.0.1 -> 3.0.2
+-|    |    +--- com.google.guava:failureaccess:1.0.1
+-|    |    +--- com.google.guava:guava:27.1-jre (*)
+-|    |    +--- com.squareup:javapoet:1.13.0
+-|    |    \--- javax.inject:javax.inject:1
+-|    +--- com.google.code.findbugs:jsr305:3.0.1 -> 3.0.2
+-|    +--- com.google.googlejavaformat:google-java-format:1.5
+-|    |    +--- com.google.guava:guava:22.0 -> 27.1-jre (*)
+-|    |    \--- com.google.errorprone:javac-shaded:9-dev-r4023-3
+-|    +--- com.google.guava:failureaccess:1.0.1
+-|    +--- com.google.guava:guava:27.1-jre (*)
+-|    +--- com.squareup:javapoet:1.13.0
+-|    +--- javax.annotation:jsr250-api:1.0
+-|    +--- javax.inject:javax.inject:1
+-|    +--- net.ltgt.gradle.incap:incap:0.2
+-|    +--- org.checkerframework:checker-compat-qual:2.5.3
+-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
+-|    |    +--- org.jetbrains:annotations:13.0
+-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
+-|    \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0
+-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+++--- com.google.dagger:dagger-compiler:2.42
++|    +--- com.google.dagger:dagger:2.42
++|    |    \--- javax.inject:javax.inject:1
++|    +--- com.google.dagger:dagger-producers:2.42
++|    |    +--- com.google.dagger:dagger:2.42 (*)
++|    |    +--- com.google.guava:failureaccess:1.0.1
++|    |    +--- com.google.guava:guava:31.0.1-jre
++|    |    |    +--- com.google.guava:failureaccess:1.0.1
++|    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
++|    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
++|    |    |    +--- org.checkerframework:checker-qual:3.12.0
++|    |    |    +--- com.google.errorprone:error_prone_annotations:2.7.1
++|    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
++|    |    +--- javax.inject:javax.inject:1
++|    |    \--- org.checkerframework:checker-compat-qual:2.5.5
++|    +--- com.google.dagger:dagger-spi:2.42
++|    |    +--- com.google.dagger:dagger:2.42 (*)
++|    |    +--- com.google.dagger:dagger-producers:2.42 (*)
++|    |    +--- com.google.code.findbugs:jsr305:3.0.2
++|    |    +--- com.google.devtools.ksp:symbol-processing-api:1.5.30-1.0.0
++|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30 -> 1.5.32
++|    |    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.32 -> 1.6.10
++|    |    |         |    +--- org.jetbrains:annotations:13.0
++|    |    |         |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
++|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.32
++|    |    |              \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.32 -> 1.6.10 (*)
++|    |    +--- com.google.guava:failureaccess:1.0.1
++|    |    +--- com.google.guava:guava:31.0.1-jre (*)
++|    |    +--- com.squareup:javapoet:1.13.0
++|    |    +--- javax.inject:javax.inject:1
++|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.32 (*)
++|    +--- com.google.code.findbugs:jsr305:3.0.2
++|    +--- com.google.googlejavaformat:google-java-format:1.5
++|    |    +--- com.google.guava:guava:22.0 -> 31.0.1-jre (*)
++|    |    \--- com.google.errorprone:javac-shaded:9-dev-r4023-3
++|    +--- com.google.guava:failureaccess:1.0.1
++|    +--- com.google.guava:guava:31.0.1-jre (*)
++|    +--- com.squareup:javapoet:1.13.0
++|    +--- javax.inject:javax.inject:1
++|    +--- net.ltgt.gradle.incap:incap:0.2
++|    +--- org.checkerframework:checker-compat-qual:2.5.5
++|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
++|    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.32 (*)
++|    \--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2
++|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.10 (*)
+-+--- com.google.dagger:dagger-compiler:{strictly 2.37} -> 2.37 (c)
+++--- com.google.dagger:dagger-compiler:{strictly 2.42} -> 2.42 (c)
+-+--- com.google.dagger:dagger:{strictly 2.37} -> 2.37 (c)
+++--- com.google.dagger:dagger:{strictly 2.42} -> 2.42 (c)
+-+--- com.google.dagger:dagger-producers:{strictly 2.37} -> 2.37 (c)
+++--- com.google.dagger:dagger-producers:{strictly 2.42} -> 2.42 (c)
+-+--- com.google.dagger:dagger-spi:{strictly 2.37} -> 2.37 (c)
+++--- com.google.dagger:dagger-spi:{strictly 2.42} -> 2.42 (c)
+-+--- com.google.guava:guava:{strictly 27.1-jre} -> 27.1-jre (c)
+++--- com.google.guava:guava:{strictly 31.0.1-jre} -> 31.0.1-jre (c)
+-+--- javax.annotation:jsr250-api:{strictly 1.0} -> 1.0 (c)
+-+--- org.checkerframework:checker-compat-qual:{strictly 2.5.3} -> 2.5.3 (c)
+++--- org.checkerframework:checker-compat-qual:{strictly 2.5.5} -> 2.5.5 (c)
+-+--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.5.0} -> 1.5.0 (c)
+++--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.6.10} -> 1.6.10 (c)
+++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.5.32} -> 1.5.32 (c)
+-+--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:{strictly 0.3.0} -> 0.3.0 (c)
+++--- org.jetbrains.kotlinx:kotlinx-metadata-jvm:{strictly 0.4.2} -> 0.4.2 (c)
+++--- com.google.devtools.ksp:symbol-processing-api:{strictly 1.5.30-1.0.0} -> 1.5.30-1.0.0 (c)
+-+--- org.checkerframework:checker-qual:{strictly 2.5.2} -> 2.5.2 (c)
+++--- org.checkerframework:checker-qual:{strictly 3.12.0} -> 3.12.0 (c)
+-+--- com.google.errorprone:error_prone_annotations:{strictly 2.2.0} -> 2.2.0 (c)
+++--- com.google.errorprone:error_prone_annotations:{strictly 2.7.1} -> 2.7.1 (c)
+-+--- com.google.j2objc:j2objc-annotations:{strictly 1.1} -> 1.1 (c)
+++--- com.google.j2objc:j2objc-annotations:{strictly 1.3} -> 1.3 (c)
+-+--- org.codehaus.mojo:animal-sniffer-annotations:{strictly 1.17} -> 1.17 (c)
+-\--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.5.0} -> 1.5.0 (c)
+++--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.6.10} -> 1.6.10 (c)
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.5.32} -> 1.5.32 (c)
+
+runtimeClasspath - Runtime classpath of compilation 'main' (target  (jvm)).
+ +--- project :backend:database
+-|    \--- com.google.dagger:dagger:2.37
++|    \--- com.google.dagger:dagger:2.42
+ +--- project :backend:quickbook
+-|    \--- com.google.dagger:dagger:2.37 (*)
++|    \--- com.google.dagger:dagger:2.42 (*)
+-+--- com.google.dagger:dagger:2.37 (*)
+++--- com.google.dagger:dagger:2.42 (*)
+-\--- com.google.dagger:dagger:{strictly 2.37} -> 2.37 (c)
++\--- com.google.dagger:dagger:{strictly 2.42} -> 2.42 (c)
+
+testCompileClasspath - Compile classpath for compilation 'test' (target  (jvm)).
+-+--- com.google.dagger:dagger:2.37
+++--- com.google.dagger:dagger:2.42
+-\--- com.google.dagger:dagger:{strictly 2.37} -> 2.37 (c)
++\--- com.google.dagger:dagger:{strictly 2.42} -> 2.42 (c)
+
+testImplementationDependenciesMetadata
+-\--- com.google.dagger:dagger:2.37
++\--- com.google.dagger:dagger:2.42
+
+testRuntimeClasspath - Runtime classpath of compilation 'test' (target  (jvm)).
+ +--- project :backend:database
+-|    +--- com.google.dagger:dagger:2.37
++|    +--- com.google.dagger:dagger:2.42
+ |    \--- project :backend:quickbook
+-|         \--- com.google.dagger:dagger:2.37 (*)
++|         \--- com.google.dagger:dagger:2.42 (*)
+-+--- com.google.dagger:dagger:2.37 (*)
+++--- com.google.dagger:dagger:2.42 (*)
+-\--- com.google.dagger:dagger:{strictly 2.37} -> 2.37 (c)
++\--- com.google.dagger:dagger:{strictly 2.42} -> 2.42 (c)

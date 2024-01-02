@@ -1,3 +1,4 @@
+detekt - The detekt dependencies to be used for this project.
  \--- io.gitlab.arturbosch.detekt:detekt-cli:1.20.0
       +--- io.gitlab.arturbosch.detekt:detekt-tooling:1.20.0
       |    \--- io.gitlab.arturbosch.detekt:detekt-api:1.20.0

@@ -1,3 +1,4 @@
+<unknown configuration>
  \--- com.google.firebase:firebase-perf:18.0.0
 -     \--- com.squareup.okhttp3:okhttp:3.0.0 -> 4.8.0
 +     \--- com.squareup.okhttp3:okhttp:3.0.0 -> 4.8.1

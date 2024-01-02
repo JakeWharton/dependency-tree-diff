@@ -1,3 +1,4 @@
+<unknown configuration>
  +--- com.squareup.sqldelight:android-driver:1.4.0
  |    +--- com.squareup.sqldelight:runtime-jvm:1.4.0
 -|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72

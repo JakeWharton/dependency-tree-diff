@@ -1,3 +1,4 @@
+default
  \--- group:dep1:1.0
 -     \--- group:dep2:2.0
 +     \--- group:dep2:2.1
