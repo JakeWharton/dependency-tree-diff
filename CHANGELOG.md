@@ -3,6 +3,13 @@
 ## [Unreleased]
 
 
+## [1.2.1] - 2024-01-02
+
+### Fixed
+
+ - Support dependency trees with a single root dependency.
+
+
 ## [1.2.0] - 2020-09-16
 
 ### Fixed
@@ -27,7 +34,8 @@
 Initial release
 
 
-[Unreleased]: https://github.com/JakeWharton/dependency-tree-diff/compare/1.2.0...HEAD
+[Unreleased]: https://github.com/JakeWharton/dependency-tree-diff/compare/1.2.1...HEAD
+[1.2.1]: https://github.com/JakeWharton/dependency-tree-diff/releases/tag/1.2.1
 [1.2.0]: https://github.com/JakeWharton/dependency-tree-diff/releases/tag/1.2.0
 [1.1.0]: https://github.com/JakeWharton/dependency-tree-diff/releases/tag/1.1.0
 [1.0.0]: https://github.com/JakeWharton/dependency-tree-diff/releases/tag/1.0.0
