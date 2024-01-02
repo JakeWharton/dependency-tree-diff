@@ -26,7 +26,14 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 tasks.withType(KotlinJvmCompile).configureEach {
-	compilerOptions.jvmTarget = JvmTarget.JVM_11
+	compilerOptions {
+		jvmTarget = JvmTarget.JVM_11
+		freeCompilerArgs.addAll(
+			'-Xno-call-assertions',
+			'-Xno-param-assertions',
+			'-Xno-receiver-assertions',
+		)
+	}
 }
 
 def fatJarProvider = tasks.register('fatJar', Jar) { task ->
