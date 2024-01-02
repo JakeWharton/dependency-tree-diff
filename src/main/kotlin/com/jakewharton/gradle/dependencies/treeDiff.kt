@@ -3,6 +3,7 @@
 package com.jakewharton.gradle.dependencies
 
 import java.util.ArrayDeque
+import java.util.regex.Pattern
 
 @JvmName("diff")
 fun dependencyTreeDiff(old: String, new: String): String {
@@ -17,10 +18,10 @@ fun dependencyTreeDiff(old: String, new: String): String {
 	}
 }
 
-private val newlineRegex = "(\r\n|\n|\r)".toRegex()
+private val newlineRegex = Pattern.compile("(\r\n|\n|\r)")
 
 private fun findDependencyPaths(text: String): Set<List<String>> {
-	val dependencyLines = text.split(newlineRegex)
+	val dependencyLines = newlineRegex.split(text)
 		.dropWhile { !it.startsWith("+--- ") && !it.startsWith("\\---") }
 		.takeWhile { it.isNotEmpty() }
 
