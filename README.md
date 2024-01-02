@@ -72,7 +72,7 @@ In this particular sample we can reach the root dependencies with `diff -U 2`:
 Now, however, additional unchanged dependencies are displayed such as `androidx.sqlite` and the
 SQLDelight runtime dependency by the RxJava 2 extensions artifact.
 
-For deep dependency chains, `-U 2` will not be enough to see all of the roots. Increasing the value
+For deep dependency chains, `-U 2` will not be enough to see all the roots. Increasing the value
 will only show more unchanged dependencies. `dependency-tree-diff` will always display the
 minimal subset needed to provide context.
 
@@ -108,7 +108,7 @@ $ brew install JakeWharton/repo/dependency-tree-diff
 
 Download standalone JAR from
 [latest release](https://github.com/JakeWharton/dependency-tree-diff/releases/latest).
-On MacOS and Linux you can `chmod +x` and execute the `.jar` directly.
+On Linux and macOS you can `chmod +x` and execute the `.jar` directly.
 On Windows use `java -jar`.
 
 
