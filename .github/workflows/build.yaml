@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: 11
+          java-version: 21
 
       - uses: gradle/wrapper-validation-action@v1
       - run: ./gradlew build

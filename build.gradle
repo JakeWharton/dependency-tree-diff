@@ -62,6 +62,12 @@ def r8Jar = tasks.register('r8Jar', JavaExec) { task ->
 	task.inputs.file(rulesFile)
 	task.outputs.file(r8File)
 
+	// R8 uses the executing JDK to determine the classfile target.
+	javaLauncher = javaToolchains.launcherFor {
+		languageVersion = JavaLanguageVersion.of(11)
+		vendor = JvmVendorSpec.AZUL
+	}
+
 	task.classpath(configurations.r8)
 	task.mainClass = 'com.android.tools.r8.R8'
 	task.args = [
