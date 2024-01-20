@@ -1,6 +1,7 @@
 package com.jakewharton.gradle.dependencies
 
-import com.google.common.truth.Truth.assertThat
+import assertk.assertThat
+import assertk.assertions.isEqualTo
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized

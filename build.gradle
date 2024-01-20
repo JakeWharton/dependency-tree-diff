@@ -15,7 +15,7 @@ configurations {
 
 dependencies {
 	testImplementation libs.junit
-	testImplementation libs.truth
+	testImplementation libs.assertk
 
 	r8 libs.r8
 }
