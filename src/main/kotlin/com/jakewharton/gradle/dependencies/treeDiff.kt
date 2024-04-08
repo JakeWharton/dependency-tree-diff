@@ -18,7 +18,7 @@ fun dependencyTreeDiff(old: String, new: String): String {
 	}
 }
 
-private val newlineRegex = Pattern.compile("(\r\n|\n|\r)")
+private val newlineRegex = Pattern.compile("(\\r\\n|\\n|\\r)")
 
 private fun findDependencyPaths(text: String): Set<List<String>> {
 	val dependencyLines = newlineRegex.split(text)
