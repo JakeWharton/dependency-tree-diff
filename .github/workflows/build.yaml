@@ -19,7 +19,7 @@ jobs:
           distribution: 'zulu'
           java-version: 21
 
-      - uses: gradle/actions/wrapper-validation@v3
+      - uses: gradle/actions/wrapper-validation@v4
       - run: ./gradlew build
 
       - uses: actions/upload-artifact@v4
