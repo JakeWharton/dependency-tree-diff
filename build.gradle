@@ -17,7 +17,12 @@ dependencies {
 	testImplementation libs.junit
 	testImplementation libs.assertk
 
-	r8 libs.r8
+	r8(libs.r8) {
+		attributes {
+			// R8 needs JVM 11 but the Jar is not published with Gradle module metadata
+			attribute(org.gradle.api.attributes.java.TargetJvmVersion.TARGET_JVM_VERSION_ATTRIBUTE, 11)
+		}
+	}
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -68,12 +73,6 @@ def r8Jar = tasks.register('r8Jar', JavaExec) { task ->
 	task.inputs.file(fatJarFile)
 	task.inputs.file(rulesFile)
 	task.outputs.file(r8File)
-
-	// R8 uses the executing JDK to determine the classfile target.
-	javaLauncher = javaToolchains.launcherFor {
-		languageVersion = JavaLanguageVersion.of(11)
-		vendor = JvmVendorSpec.AZUL
-	}
 
 	task.classpath(configurations.r8)
 	task.mainClass = 'com.android.tools.r8.R8'

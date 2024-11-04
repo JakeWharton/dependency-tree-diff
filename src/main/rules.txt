@@ -1,6 +1,7 @@
 -dontobfuscate
 -allowaccessmodification
 -keepattributes SourceFile, LineNumberTable
+-target 11
 
 -keep class com.jakewharton.gradle.dependencies.DependencyTreeDiff {
 	public static void main(java.lang.String[]);
