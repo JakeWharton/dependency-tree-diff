@@ -19,7 +19,7 @@ dependencies {
 
 	r8(libs.r8) {
 		attributes {
-			// R8 needs JVM 11 but the Jar is not published with Gradle module metadata
+			// R8 needs JVM 11 but the Jar is not published with Gradle module metadata: https://issuetracker.google.com/issues/377126124
 			attribute(org.gradle.api.attributes.java.TargetJvmVersion.TARGET_JVM_VERSION_ATTRIBUTE, 11)
 		}
 	}
