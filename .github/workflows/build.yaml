@@ -21,6 +21,7 @@ jobs:
 
       - uses: gradle/actions/wrapper-validation@v4
       - run: ./gradlew build
+      - run: build/dependency-tree-diff.jar --help
 
       - uses: actions/upload-artifact@v4
         with:
