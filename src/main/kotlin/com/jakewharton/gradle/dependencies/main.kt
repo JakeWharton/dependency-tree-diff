@@ -25,7 +25,7 @@ fun main(vararg args: String) {
 	print(dependencyTreeDiff(old, new))
 }
 
-// TODO replace with https://youtrack.jetbrains.com/issue/KT-19192
+// Don't use Path.readText from stdlib because it introduces few classes, which will increase the binary size a bit.
 @Suppress("NOTHING_TO_INLINE")
 private inline fun Path.readText(charset: Charset = StandardCharsets.UTF_8): String {
 	return Files.readAllBytes(this).toString(charset)
