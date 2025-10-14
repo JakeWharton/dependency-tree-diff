@@ -6,7 +6,7 @@ import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
-import java.nio.file.Paths
+import kotlin.io.path.Path
 import kotlin.system.exitProcess
 
 fun main(vararg args: String) {
@@ -19,8 +19,8 @@ fun main(vararg args: String) {
 		return
 	}
 
-	val old = args[0].let(Paths::get).readText()
-	val new = args[1].let(Paths::get).readText()
+	val old = Path(args[0]).readText()
+	val new = Path(args[1]).readText()
 
 	print(dependencyTreeDiff(old, new))
 }
