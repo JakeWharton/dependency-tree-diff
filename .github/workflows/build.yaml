@@ -23,7 +23,7 @@ jobs:
       - run: ./gradlew build
       - run: build/dependency-tree-diff.jar --help
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         with:
           name: dependency-tree-diff.jar
           path: build/dependency-tree-diff.jar
