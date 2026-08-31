@@ -1,0 +1,198 @@
+apiDependenciesMetadata
+-\--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     \--- org.jetbrains:annotations:13.0
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
+compileClasspath - Compile classpath for compilation 'main' (target  (jvm)).
+-\--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     \--- org.jetbrains:annotations:13.0
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
+implementationDependenciesMetadata
+-\--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     \--- org.jetbrains:annotations:13.0
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
+kotlinCompilerClasspath
+-\--- org.jetbrains.kotlin:kotlin-compiler-embeddable:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     |    \--- org.jetbrains:annotations:13.0
+-     +--- org.jetbrains.kotlin:kotlin-script-runtime:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-reflect:1.4.0
+-     |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0 (*)
+-     +--- org.jetbrains.kotlin:kotlin-daemon-embeddable:1.4.0
+-     \--- org.jetbrains.intellij.deps:trove4j:1.0.20181211
++\--- org.jetbrains.kotlin:kotlin-compiler-embeddable:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-script-runtime:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-reflect:1.5.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++     +--- org.jetbrains.kotlin:kotlin-daemon-embeddable:1.5.0
++     \--- org.jetbrains.intellij.deps:trove4j:1.0.20181211
+
+kotlinCompilerPluginClasspath
+-\--- org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:1.4.0
+-     |    +--- org.jetbrains.kotlin:kotlin-scripting-common:1.4.0
+-     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     |    |    |    \--- org.jetbrains:annotations:13.0
+-     |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7
+-     |    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.4.0 (*)
+-     |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.3.71 -> 1.4.0
+-     |    +--- org.jetbrains.kotlin:kotlin-scripting-jvm:1.4.0
+-     |    |    +--- org.jetbrains.kotlin:kotlin-script-runtime:1.4.0
+-     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0 (*)
+-     |    |    \--- org.jetbrains.kotlin:kotlin-scripting-common:1.4.0 (*)
+-     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0 (*)
+-     |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7 (*)
+-     \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0 (*)
+
+kotlinKlibCommonizerClasspath
+-\--- org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     |    \--- org.jetbrains:annotations:13.0
+-     \--- org.jetbrains.kotlin:kotlin-compiler-embeddable:1.4.0
+-          +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0 (*)
+-          +--- org.jetbrains.kotlin:kotlin-script-runtime:1.4.0
+-          +--- org.jetbrains.kotlin:kotlin-reflect:1.4.0
+-          |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0 (*)
+-          +--- org.jetbrains.kotlin:kotlin-daemon-embeddable:1.4.0
+-          \--- org.jetbrains.intellij.deps:trove4j:1.0.20181211
++\--- org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     \--- org.jetbrains.kotlin:kotlin-compiler-embeddable:1.5.0
++          +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++          +--- org.jetbrains.kotlin:kotlin-script-runtime:1.5.0
++          +--- org.jetbrains.kotlin:kotlin-reflect:1.5.0
++          |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++          +--- org.jetbrains.kotlin:kotlin-daemon-embeddable:1.5.0
++          \--- org.jetbrains.intellij.deps:trove4j:1.0.20181211
+
+runtimeClasspath - Runtime classpath of compilation 'main' (target  (jvm)).
+-\--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     \--- org.jetbrains:annotations:13.0
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
+testCompileClasspath - Compile classpath for compilation 'test' (target  (jvm)).
+-\--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     \--- org.jetbrains:annotations:13.0
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
+testImplementationDependenciesMetadata
+-\--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     \--- org.jetbrains:annotations:13.0
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
+testRuntimeClasspath - Runtime classpath of compilation 'test' (target  (jvm)).
+-\--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0
+-     +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0
+-     \--- org.jetbrains:annotations:13.0
++\--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    +--- org.jetbrains:annotations:13.0
++     |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0
++          \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
++apiElements-published (n)
+No dependencies
+
++kotlinCompilerPluginClasspathMain - Kotlin compiler plugins for compilation 'main' (target  (jvm))
++\--- org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:1.5.0
++     |    +--- org.jetbrains.kotlin:kotlin-scripting-common:1.5.0
++     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    |    |    +--- org.jetbrains:annotations:13.0
++     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.8
++     |    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.5.0 (*)
++     |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.3.71 -> 1.5.0
++     |    +--- org.jetbrains.kotlin:kotlin-scripting-jvm:1.5.0
++     |    |    +--- org.jetbrains.kotlin:kotlin-script-runtime:1.5.0
++     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++     |    |    \--- org.jetbrains.kotlin:kotlin-scripting-common:1.5.0 (*)
++     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++     |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.8 (*)
++     \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
++kotlinCompilerPluginClasspathTest - Kotlin compiler plugins for compilation 'test' (target  (jvm))
++\--- org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:1.5.0
++     +--- org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:1.5.0
++     |    +--- org.jetbrains.kotlin:kotlin-scripting-common:1.5.0
++     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0
++     |    |    |    +--- org.jetbrains:annotations:13.0
++     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0
++     |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.8
++     |    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.5.0 (*)
++     |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.3.71 -> 1.5.0
++     |    +--- org.jetbrains.kotlin:kotlin-scripting-jvm:1.5.0
++     |    |    +--- org.jetbrains.kotlin:kotlin-script-runtime:1.5.0
++     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++     |    |    \--- org.jetbrains.kotlin:kotlin-scripting-common:1.5.0 (*)
++     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
++     |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.8 (*)
++     \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.0 (*)
+
++runtimeElements-published (n)
+No dependencies
+
+--api (n)
+No dependencies
+
+--runtime (n)
+No dependencies
+
+-compile - Dependencies for compilation 'main' (target  (jvm)) (deprecated, use 'implementation ' instead).
+No dependencies
+
+-runtime - Runtime dependencies for compilation 'main' (target  (jvm)) (deprecated, use 'runtimeOnly ' instead).
+No dependencies
+
+-testCompile - Dependencies for compilation 'test' (target  (jvm)) (deprecated, use 'testImplementation ' instead).
+No dependencies
+
+-testRuntime - Runtime dependencies for compilation 'test' (target  (jvm)) (deprecated, use 'testRuntimeOnly ' instead).
+No dependencies

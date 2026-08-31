@@ -7,8 +7,91 @@ import java.util.regex.Pattern
 
 @JvmName("diff")
 fun dependencyTreeDiff(old: String, new: String): String {
-	val oldPaths = findDependencyPaths(old)
-	val newPaths = findDependencyPaths(new)
+	val olds = dependencies(old)
+	val news = dependencies(new)
+
+	val addedConfigurations = news.keys - olds.keys
+	val removedConfigurations = olds.keys - news.keys
+	val matchingConfigurations = news.keys intersect olds.keys
+
+	val added = addedConfigurations
+		.associateWith { dependencyTreeDiff(emptyList(), news.getValue(it)) }
+		.mapKeys { "+${it.key}" }
+		.mapValues { it.value.takeIf(String::isNotEmpty) ?: "No dependencies\n" }
+	val removed = removedConfigurations
+		.associateWith { dependencyTreeDiff(olds.getValue(it), emptyList()) }
+		.mapKeys { "-${it.key}" }
+		.mapValues { it.value.takeIf(String::isNotEmpty) ?: "No dependencies\n" }
+	val modified = matchingConfigurations
+		.associateWith { dependencyTreeDiff(olds.getValue(it), news.getValue(it)) }
+		// Ignore configurations that didn't change at all.
+		.filter { it.value != "" }
+
+	return if (modified.size == 1 && added.isEmpty() && removed.isEmpty()) {
+		modified.values.single()
+	} else {
+		(modified + added + removed)
+			.entries
+			.joinToString(separator = "\n") { (configuration, diff) ->
+				"${configuration}\n${diff}"
+			}
+	}
+}
+
+private enum class DependencyScanState {
+	LOOKING,
+	SCANNING,
+}
+
+private val newlineRegex = Pattern.compile("(\\r\\n|\\n|\\r)")
+
+private fun dependencies(text: String): Map<String, List<String>> {
+	val configurations = mutableMapOf<String, List<String>>()
+	var state = DependencyScanState.LOOKING
+	var configuration = "String to Satisfy Kotlin Compiler"
+	val dependencies = mutableListOf<String>()
+	newlineRegex
+		.split(text, -1)
+		.fold("<unknown configuration>") { prev, curr ->
+			when (state) {
+				DependencyScanState.LOOKING -> {
+					if (curr.startsWith("+--- ") || curr.startsWith("\\---") || curr == "No dependencies" ) {
+						// Found first line of dependencies, save configuration and collect all of them.
+						configuration = prev
+						dependencies.add(curr)
+						state = DependencyScanState.SCANNING
+					} else {
+						// Continue `reduce`, skipping over unknown lines.
+					}
+				}
+
+				DependencyScanState.SCANNING -> {
+					if (curr.isEmpty()) {
+						val cleanDependencies = if (dependencies.size == 1 && dependencies[0] == "No dependencies") {
+							// Remove dependencies from configurations with only "No dependencies" so tree diff doesn't process it.
+							emptyList()
+						} else {
+							// Make a copy of the mutable list to prevent leaking mutations into result.
+							dependencies.toList()
+						}
+						if (configurations.putIfAbsent(configuration, cleanDependencies) != null) {
+							error("Unsupported input: multiple unknown configurations")
+						}
+						dependencies.clear()
+						state = DependencyScanState.LOOKING
+					} else {
+						dependencies.add(curr)
+					}
+				}
+			}
+			curr
+		}
+	return configurations
+}
+
+private fun dependencyTreeDiff(oldLines: List<String>, newLines: List<String>): String {
+	val oldPaths = findDependencyPaths(oldLines)
+	val newPaths = findDependencyPaths(newLines)
 
 	val removedTree = buildTree(oldPaths - newPaths)
 	val addedTree = buildTree(newPaths - oldPaths)
@@ -18,13 +101,7 @@ fun dependencyTreeDiff(old: String, new: String): String {
 	}
 }
 
-private val newlineRegex = Pattern.compile("(\r\n|\n|\r)")
-
-private fun findDependencyPaths(text: String): Set<List<String>> {
-	val dependencyLines = newlineRegex.split(text)
-		.dropWhile { !it.startsWith("+--- ") && !it.startsWith("\\---") }
-		.takeWhile { it.isNotEmpty() }
-
+private fun findDependencyPaths(dependencyLines: List<String>): Set<List<String>> {
 	val dependencyPaths = mutableSetOf<List<String>>()
 	val stack = ArrayDeque<String>()
 	for (dependencyLine in dependencyLines) {
